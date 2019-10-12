@@ -25,10 +25,10 @@
         <div class="row">
             <div class="col-5 text-md-left flexContainer">
                 <h1 class="text">CPU</h1>
-                <img src="assets/Sf2hf-ryu-portrait.gif" class="c-thumbnails" id="ryu">
-                <img src="assets/Sf2hf-zangief-portrait.gif" class="c-thumbnails" id="zang">
-                <img src="assets/Sf2hf-honda-portrait.gif" class="c-thumbnails" id="honda">
-                <img src="assets/Sf2hf-chun-portrait.gif" class="c-thumbnails" id="chung">
+                <img src="assets/Sf2hf-ryu-portrait.gif" class="c-thumbnails" id="ryu2">
+                <img src="assets/Sf2hf-zangief-portrait.gif" class="c-thumbnails" id="zang2">
+                <img src="assets/Sf2hf-honda-portrait.gif" class="c-thumbnails" id="honda2">
+                <img src="assets/Sf2hf-chun-portrait.gif" class="c-thumbnails" id="chung2">
                 <p id="health">HEALTH</p>
                 <div class="progress">
                     <div id="cpuhealth" class="progress-bar bg-danger progress-bar-striped progress-bar-animated"
@@ -41,13 +41,11 @@
             </div>
             <div class="col-5 text-sm-right">
                 <h1 class="text">PLAYER 1</h1>
-                <img src="assets/Sf2hf-ryu-portrait.gif" class="p-thumbnails" type="button" id="ryu" onclick="ryu()">
-                <img src="assets/Sf2hf-zangief-portrait.gif" class="p-thumbnails" type="button" id="zang zangHealth"
-                    onclick="zang()">
-                <img src="assets/Sf2hf-honda-portrait.gif" class="p-thumbnails" type="button" id="honda"
-                    onclick="honda()">
-                <img src="assets/Sf2hf-chun-portrait.gif" class="p-thumbnails" type="button" id="chung"
-                    onclick="chun()">
+                <img src="assets/Sf2hf-ryu-portrait.gif" class="p-thumbnails" type="button" id="ryu">
+                <img src="assets/Sf2hf-zangief-portrait.gif" class="p-thumbnails" type="button" id="zang">
+                <img src="assets/Sf2hf-honda-portrait.gif" class="p-thumbnails" type="button" id="honda">
+                <img src="assets/Sf2hf-chun-portrait.gif" class="p-thumbnails" type="button" id="chung">
+
                 <p id="health">HEALTH</p>
                 <div class="progress">
                     <div id="p1health" class="progress-bar bg-danger progress-bar-striped progress-bar-animated"
@@ -55,7 +53,7 @@
                     </div>
                 </div>
                 <div class="row justify-content-end">
-                    <div class="col-8">
+                    <div class="col-12">
                         <div class="text-md-right">
                             <button type="button" class="btn btn-warning button" id="special">Special</button>
                             <button type="button" class="btn btn-danger button" id="kick">Kick</button>
@@ -67,28 +65,21 @@
         </div>
         <div class="flexcontainer">
             <div class="row">
-                <div class="col-12 text-center">
-                    <div>
-                        <img src="assets/Street_Fighter_Logo.png" id="logo">
-                    </div>
-                    <img src="assets/arcade-font-writer.png" id="start" onclick="start()">
+                <div class="col-12 text-center" id="title">
+                    <div><img src="assets/Street_Fighter_Logo.png" id="logo"></div>
+                    <img src="assets/arcade-font-writer.png" id="start" onclick=(start())>
                     <img src="assets/choose.png" id="choose">
-                    <img src="assets/gameover.png" id="gameover">
+                    <!-- <img src="assets/gameover.png" id="gameover"> -->
                 </div>
-                <div class="col-6 text-md-left" id="char-lft">
-                    <img src="assets/chun_left.gif" class="p-characters">
-                </div>
-                <div class="col-6 text-md-right" id="P1-fighter">
-                    <img src="assets/chun_right.gif" class="c-characters" id="chun-rht">
-                    <img src="assets/zang_right.png" class="c-characters" id="zang-rht">
-                    <img src="assets/ryu_right.png" class="c-characters" id="ryu-rht">
-                    <img src="assets/SSF2T_E._Honda_right.gif" class="c-characters" id="honda-rht">
-                </div>
+                <div class="col-6 text-md-left" id="char-lft"></div>
+                <div class="col-6 text-md-right" id="P1-fighter"></div>
             </div>
 
 
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="magic.js"></script>
 </body>
 
