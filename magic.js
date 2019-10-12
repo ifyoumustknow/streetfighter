@@ -74,3 +74,9 @@ function ryu() {
 // function to play again//
 
 // BONUS function to track health points using health bar ///
+
+// let cpuhealth = document.getElementById("cpuhealth")
+// health.value -= 10; //Or whatever you want to do with it.
+
+// let p1health = document.getElementById("p1health")
+// health.value -= 10; //Or whatever you want to do with it.
