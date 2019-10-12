@@ -38,12 +38,15 @@
             <div class="col-2 text-center">
                 <img src="assets/vs.png" class="versus" id="CPU">
             </div>
-            <div class="col-5 text-md-right">
+            <div class="col-5 text-sm-right">
                 <h1 class="text">PLAYER 1</h1>
-                <img src="assets/Sf2hf-ryu-portrait.gif" class="p-thumbnails" type="button" id="ryu">
-                <img src="assets/Sf2hf-zangief-portrait.gif" class="p-thumbnails" type="button" id="zang zangHealth">
-                <img src="assets/Sf2hf-honda-portrait.gif" class="p-thumbnails" type="button" id="honda">
-                <img src="assets/Sf2hf-chun-portrait.gif" class="p-thumbnails" type="button" id="chung">
+                <img src="assets/Sf2hf-ryu-portrait.gif" class="p-thumbnails" type="button" id="ryu" onclick="ryu()">
+                <img src="assets/Sf2hf-zangief-portrait.gif" class="p-thumbnails" type="button" id="zang zangHealth"
+                    onclick="zang()">
+                <img src="assets/Sf2hf-honda-portrait.gif" class="p-thumbnails" type="button" id="honda"
+                    onclick="honda()">
+                <img src="assets/Sf2hf-chun-portrait.gif" class="p-thumbnails" type="button" id="chung"
+                    onclick="chun()">
                 <p id="health">HEALTH</p>
                 <div class="progress">
                     <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar"
@@ -64,19 +67,23 @@
             <div class="row">
                 <div class="col-12 text-center">
                     <div>
-                        <img src="assets/Street_Fighter_Logo.png" class="logo">
+                        <img src="assets/Street_Fighter_Logo.png" id="logo">
                     </div>
-                    <img src="assets/arcade-font-writer.png" class="start">
+                    <img src="assets/arcade-font-writer.png" id="start" onclick="start()">
+                    <img src="assets/choose.png" id="choose">
+                    <img src="assets/gameover.png" id="gameover">
                 </div>
-                <div class="col-6 text-md-left">
-                    <img src="assets/chun_left.gif" id="chun-lg" class="p-characters">
+                <div class="col-6 text-md-left" id="char-lft">
+                    <img src="assets/chun_left.gif" class="p-characters">
                 </div>
-                <div class="col-6 text-md-right">
-                    <img src="assets/chun_right.gif" class="c-characters">
+                <div class="col-6 text-md-right" id="P1-fighter">
+                    <img src="assets/chun_right.gif" class="c-characters" id="chun-rht">
+                    <img src="assets/zang_right.png" class="c-characters" id="zang-rht">
+                    <img src="assets/ryu_right.png" class="c-characters" id="ryu-rht">
+                    <img src="assets/SSF2T_E._Honda_right.gif" class="c-characters" id="honda-rht">
                 </div>
             </div>
-            </br>
-            </br>
+
 
         </div>
     </div>

@@ -27,7 +27,7 @@
 }
 
 .p-characters{
-    height:30vmax;
+    height:29vmax;
     margin: 5vmin;
     padding: 0;
     border-width: .3em;
@@ -37,7 +37,7 @@
 }
 
 .c-characters{
-    height:30vmax;
+    height:29vmax;
     margin: 11vmin;
     padding: 0;
     border-width: .3em;
@@ -60,6 +60,23 @@
     font-style: normal;
 }
 
+
+.button{
+    margin:3vh 1vh 1vh 1vh;
+    height:5vmin;
+    width: 10vmin;
+    font-size: 2vmin;
+    float: right;
+    padding: 0%;
+    border-radius: 1vmin;
+    text-align: center;
+
+}
+
+.transparent{
+    background: rgba(red, green, blue, 0.0);
+}
+
 #health{
     font-family: bree-serif, serif;
     font-weight: 600;
@@ -68,27 +85,27 @@
     font-size: 2vmin;
 }
 
-.button{
-    margin:3vh 1vh 1vh 1vh;
-    height:5vmin;
-    font-size: 2vmin;
-    float: left;
-    border-radius: 1vmin;
-
+#choose {
+    margin-top: 20vh;
+    display:none;
+    
 }
 
-.transparent{
-    background: rgba(red, green, blue, 0.0);
+#gameover {
+    margin-top: 20vh;
+    display:none;
+    cursor: pointer;
 }
 
-.logo{
+#logo{
     width: 50vw;
     margin: auto;
 }
 
-.start{
+#start{
     width: 25vw;
     margin: auto;
+    cursor: pointer;
 }
 
 /* font-family: bree-serif, serif;
