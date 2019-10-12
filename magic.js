@@ -18,6 +18,8 @@ window.onload = function () {
         // document.getElementById("P1-fighter").innerHTML = '<img src="assets/ryu_right.png"';
         $("#choose").empty();
         $("#title").empty();
+        $("#p1health").empty();
+        $("#p1health").append(120);
         $("#P1-fighter").empty();
         $("#P1-fighter").append('<img src="assets/ryu_right.png" class="c-characters"/>');
     });
@@ -26,6 +28,8 @@ window.onload = function () {
         // document.getElementById("P1-fighter").innerHTML = '<img src="assets/ryu_right.png"';
         $("#choose").empty();
         $("#title").empty();
+        $("#p1health").empty();
+        $("#p1health").append(180);
         $("#P1-fighter").empty();
         $("#P1-fighter").append('<img src="assets/chun_right.gif" class="c-characters"/>');
     });
@@ -34,6 +38,8 @@ window.onload = function () {
         // document.getElementById("P1-fighter").innerHTML = '<img src="assets/ryu_right.png"';
         $("#choose").empty();
         $("#title").empty();
+        $("#p1health").empty();
+        $("#p1health").append(150);
         $("#P1-fighter").empty();
         $("#P1-fighter").append('<img src="assets/zang_right.png" class="c-characters"/>');
     });
@@ -42,6 +48,8 @@ window.onload = function () {
         // document.getElementById("P1-fighter").innerHTML = '<img src="assets/ryu_right.png"';
         $("#choose").empty();
         $("#title").empty();
+        $("#p1health").empty();
+        $("#p1health").append(120);
         $("#P1-fighter").empty();
         $("#P1-fighter").append('<img src="assets/Honda_right.png" class="c-characters"/>');
     });

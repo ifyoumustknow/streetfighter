@@ -77,7 +77,14 @@
     background: rgba(red, green, blue, 0.0);
 }
 
-#health{
+#cpuhealth{
+    font-family: bree-serif, serif;
+    font-weight: 600;
+    font-style: normal;
+    color: white;
+    font-size: 2vmin;
+}
+#p1health{
     font-family: bree-serif, serif;
     font-weight: 600;
     font-style: normal;
