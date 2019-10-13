@@ -1,27 +1,25 @@
-// var ryuHealth = 120;
-// var zangHealth = 100;
-// var hondaHealth = 150;
-// var chungHealth = 180;
+// var ryuHealth = 170;
+// var zangHealth = 190;
+// var hondaHealth = 180;
+// var chungHealth = 200;
 // var characters = []
 
-function start() {
-    document.getElementById('logo').style.display = 'none';
-    document.getElementById('start').style.display = 'none';
-    document.getElementById('choose').style.display = 'inline';
-
-}
 
 window.onload = function () {
-    // $("#start").on("click", start)
+    $("#start").on("click", start)
     $("#ryu").on("click", function () {
         console.log("test");
         // document.getElementById("P1-fighter").innerHTML = '<img src="assets/ryu_right.png"';
         $("#choose").empty();
         $("#title").empty();
         $("#p1health").empty();
-        $("#p1health").append(120);
+        $("#p1health").append(170);
         $("#P1-fighter").empty();
         $("#P1-fighter").append('<img src="assets/ryu_right.png" class="c-characters"/>');
+        document.getElementById("p1healthbar").style.width = '70%';
+        cpuSelect();
+
+
     });
     $("#chung").on("click", function () {
         console.log("test");
@@ -31,7 +29,8 @@ window.onload = function () {
         $("#p1health").empty();
         $("#p1health").append(180);
         $("#P1-fighter").empty();
-        $("#P1-fighter").append('<img src="assets/chun_right.gif" class="c-characters"/>');
+        $("#P1-fighter").append('<img src="assets/chun_right.png" class="c-characters"/>');
+        document.getElementById("p1healthbar").style.width = '80%';
     });
     $("#zang").on("click", function () {
         console.log("test");
@@ -39,9 +38,11 @@ window.onload = function () {
         $("#choose").empty();
         $("#title").empty();
         $("#p1health").empty();
-        $("#p1health").append(150);
+        $("#p1health").append(190);
         $("#P1-fighter").empty();
         $("#P1-fighter").append('<img src="assets/zang_right.png" class="c-characters"/>');
+        document.getElementById("p1healthbar").style.width = '90%';
+
     });
     $("#honda").on("click", function () {
         console.log("test");
@@ -49,26 +50,40 @@ window.onload = function () {
         $("#choose").empty();
         $("#title").empty();
         $("#p1health").empty();
-        $("#p1health").append(120);
+        $("#p1health").append(175);
         $("#P1-fighter").empty();
         $("#P1-fighter").append('<img src="assets/Honda_right.png" class="c-characters"/>');
+        document.getElementById("p1healthbar").style.width = '75%';
+
+
     });
 };
 
+function start() {
+    document.getElementById('logo').style.display = 'none';
+    document.getElementById('start').style.display = 'none';
+    document.getElementById('choose').style.display = 'inline';
+
+}
+function cpuSelect() {
+    var cpuFighters = [
+        { name: 'chun', image: `src="assets/chun_left.png"' class= "c-characters"` },
+        { name: 'honda', image: `src="assets/ryu_left.png"' class= "c-characters"` },
+        { name: 'zang', image: `src="assets/ryu_left.png"' class= "c-characters"` },
+        { name: 'ryu', image: `src="assets/ryu_left.png"' class= "c-characters"` }
+    ];
+    var cpuChoice = cpuFighters[Math.floor(Math.random() * cpuFighters.length)];
+    console.log(cpuChoice)
+    document.getElementById('cpu-fighter').append = cpuChoice;
+
+}
 
 
 //computer random choose character function// **in progress**
 
-// function cpuSelect() {
-//     var cpuFighters = [
-//         { name: 'chun'(<img src="assets/ryu_right.png" class="c-characters" />) },
-//         { name: 'honda'(<img src="assets/ryu_right.png" class="c-characters" />) },
-//         { name: 'zang'(<img src="assets/ryu_right.png" class="c-characters" />) }
-//         { name: 'ryu'(<img src="assets/ryu_right.png" class="c-characters" />) }
-//     ];
 
-//     for (var i = 0; i < cpuFighters.length; i += 1) {
-//         $("#P1-fighter").append('<img src=>');
+
+//   
 
 //     }
 // }

@@ -1,3 +1,9 @@
+.progress {
+    direction: rtl;;
+    width: 100%;
+    background-color: gray;
+  }
+
 .background {
     background: url(animated-gifs-of-fighting-game-backgrounds-5.gif) repeat center center fixed;
     background-size: cover;
@@ -26,18 +32,19 @@
     border-radius: 10%;
 }
 
-.p-characters{
-    height:29vmax;
+.c-characters{
+    height:25vmax;
     margin: 5vmin;
     padding: 0;
     border-width: .3em;
     background-position:center bottom;
+    display: inline;
   
 
 }
 
-.c-characters{
-    height:29vmax;
+.p-characters{
+    height:25vmax;
     margin: 11vmin;
     padding: 0;
     border-width: .3em;
@@ -82,14 +89,14 @@
     font-weight: 600;
     font-style: normal;
     color: white;
-    font-size: 2vmin;
+    font-size: 4vmin;
 }
 #p1health{
     font-family: bree-serif, serif;
     font-weight: 600;
     font-style: normal;
     color: white;
-    font-size: 2vmin;
+    font-size: 4vmin;
 }
 
 #choose {
