@@ -84,6 +84,10 @@
     background: rgba(red, green, blue, 0.0);
 }
 
+.brightness{
+    filter: brightness(60%);
+}
+
 #cpuhealth{
     font-family: bree-serif, serif;
     font-weight: 600;
@@ -120,6 +124,15 @@
     width: 25vw;
     margin: auto;
     cursor: pointer;
+}
+
+#cpu-fighter{
+    height:15vmax;
+    margin: auto;
+    padding: 0;
+    border-width: .3em;
+    background-position:center bottom;
+    
 }
 
 /* font-family: bree-serif, serif;

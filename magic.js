@@ -1,8 +1,7 @@
 // var ryuHealth = 170;
 // var zangHealth = 190;
 // var hondaHealth = 180;
-// var chungHealth = 200;
-// var characters = []
+// var chungHealth = 180;
 
 
 window.onload = function () {
@@ -20,6 +19,7 @@ window.onload = function () {
         cpuSelect();
 
 
+
     });
     $("#chung").on("click", function () {
         console.log("test");
@@ -31,6 +31,8 @@ window.onload = function () {
         $("#P1-fighter").empty();
         $("#P1-fighter").append('<img src="assets/chun_right.png" class="c-characters"/>');
         document.getElementById("p1healthbar").style.width = '80%';
+        cpuSelect();
+
     });
     $("#zang").on("click", function () {
         console.log("test");
@@ -42,6 +44,8 @@ window.onload = function () {
         $("#P1-fighter").empty();
         $("#P1-fighter").append('<img src="assets/zang_right.png" class="c-characters"/>');
         document.getElementById("p1healthbar").style.width = '90%';
+        cpuSelect();
+
 
     });
     $("#honda").on("click", function () {
@@ -54,9 +58,31 @@ window.onload = function () {
         $("#P1-fighter").empty();
         $("#P1-fighter").append('<img src="assets/Honda_right.png" class="c-characters"/>');
         document.getElementById("p1healthbar").style.width = '75%';
-
+        cpuSelect();
 
     });
+    function cpuSelect() {
+        var cpuFighters = [
+            { name: 'chun', image: `src="assets/chun_left.png" , class: "p-characters"` },
+            { name: 'honda', image: `src="assets/honda_left.png" , class: "p-characters" ` },
+            { name: 'zang', image: `src="assets/zang_left.png", class: "p-characters"` },
+            { name: 'ryu', image: `src="assets/ryu_left.png", class: "p-characters"` }
+        ];
+        var cpuChoice = cpuFighters[Math.floor(Math.random() * cpuFighters.length)];
+
+        // Using backticks `` creates a "string literal" and what that allows us to do is
+        // easily using variables in our strings! Normally we'd just add these together,
+        // but I thought you may want to see how to do it this way and if you'd wanna learn
+        // how it works
+        var cpuChoiceHTMLString = `<img ${cpuChoice.image} name=${cpuFighters.name} />`
+
+        // This next one is the exact same end result as "cpuChoiceHTMLString"
+        // Instead of doing anything fancy "string literal" stuff, we are just adding
+        // the strings together as need be.
+        // var cpuChoiceHTMLStringNoLiteral = "<img " + cpuChoice.image + " name=" + cpuFighters.name + " />"
+
+        document.getElementById('cpu-fighter').innerHTML = cpuChoiceHTMLString;
+    }
 };
 
 function start() {
@@ -65,18 +91,7 @@ function start() {
     document.getElementById('choose').style.display = 'inline';
 
 }
-function cpuSelect() {
-    var cpuFighters = [
-        { name: 'chun', image: `src="assets/chun_left.png"' class= "c-characters"` },
-        { name: 'honda', image: `src="assets/ryu_left.png"' class= "c-characters"` },
-        { name: 'zang', image: `src="assets/ryu_left.png"' class= "c-characters"` },
-        { name: 'ryu', image: `src="assets/ryu_left.png"' class= "c-characters"` }
-    ];
-    var cpuChoice = cpuFighters[Math.floor(Math.random() * cpuFighters.length)];
-    console.log(cpuChoice)
-    document.getElementById('cpu-fighter').append = cpuChoice;
 
-}
 
 
 //computer random choose character function// **in progress**
