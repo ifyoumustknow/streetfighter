@@ -1,14 +1,10 @@
-// var ryuHealth = 170;
-// var zangHealth = 190;
-// var hondaHealth = 180;
-// var chungHealth = 180;
+
 
 
 window.onload = function () {
     $("#start").on("click", start)
     $("#ryu").on("click", function () {
         console.log("test");
-        // document.getElementById("P1-fighter").innerHTML = '<img src="assets/ryu_right.png"';
         $("#choose").empty();
         $("#title").empty();
         $("#p1health").empty();
@@ -21,7 +17,6 @@ window.onload = function () {
     });
     $("#chung").on("click", function () {
         console.log("test");
-        // document.getElementById("P1-fighter").innerHTML = '<img src="assets/ryu_right.png"';
         $("#choose").empty();
         $("#title").empty();
         $("#p1health").empty();
@@ -34,7 +29,6 @@ window.onload = function () {
     });
     $("#zang").on("click", function () {
         console.log("test");
-        // document.getElementById("P1-fighter").innerHTML = '<img src="assets/ryu_right.png"';
         $("#choose").empty();
         $("#title").empty();
         $("#p1health").empty();
@@ -48,7 +42,6 @@ window.onload = function () {
     });
     $("#honda").on("click", function () {
         console.log("test");
-        // document.getElementById("P1-fighter").innerHTML = '<img src="assets/ryu_right.png"';
         $("#choose").empty();
         $("#title").empty();
         $("#p1health").empty();
@@ -57,7 +50,7 @@ window.onload = function () {
         $("#P1-fighter").append('<img src="assets/honda_right2.png" class="c-characters"/>');
         document.getElementById("p1healthbar").style.width = '75%';
         cpuSelect();
-        cpuHealth();
+
 
     });
 
@@ -72,28 +65,31 @@ window.onload = function () {
         var cpuChoice = cpuFighters[Math.floor(Math.random() * cpuFighters.length)];
         console.log(cpuChoice)
 
-        var cpuChoiceHTMLString = `<img ${cpuChoice.image} name=${cpuFighters.name} />`
-        document.getElementById('cpu-fighter').innerHTML = cpuChoiceHTMLString;
-
-
-    }
-
-    function cpuHealth() {
-        var cpuSelect
-
-        if (cpuSelect === "ryu") {
+        if (cpuChoice.name === ryu) {
+            $("#cpuhealth").empty();
+            $("#cpuealth").append(170);
             document.getElementById("cpuhealth").style.width = '70%';
 
-        } else if (cpuSelect === "honda") {
+        } else if (cpuChoice.name === honda) {
+            $("#cpuhealth").empty();
+            $("#p1health").append(175);
             document.getElementById("cpuhealth").style.width = '75%';
 
-        } else if (cpuSelect === "zang") {
+        } else if (cpuChoice.name === zang) {
+            $("cpuhealth").empty();
+            $("#cpuhealth").append(190);
             document.getElementById("cpuhealth").style.width = '90%';
 
         } else {
-            (cpuSelect === "chung")
+            cpuChoice.name === chung
+            $("#cpuhealth").empty();
+            $("#cpuhealth").append(180);
             document.getElementById("cpuhealth").style.width = '80%';
         }
+
+
+        var cpuChoiceHTMLString = `<img ${cpuChoice.image} name=${cpuFighters.name} />`
+        document.getElementById('cpu-fighter').innerHTML = cpuChoiceHTMLString;
     }
 
 
@@ -108,25 +104,7 @@ function start() {
 
 
 
-//computer random choose character function// **in progress**
 
-
-
-//   
-
-//     }
-// }
-
-/*
-
-for (let i = 0; i < cpufighters.length; i++) {
-    const image = cpufighters[i].image;
-            $("#test-image" + i + 1).attr("src", image);
-        }
-
-        */
-
-        // function to simply above and remove previous player// **in progress**
 
         // function to calculate random attack points to "Special" "Kick" "Punch" buttons//
 

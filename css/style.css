@@ -17,11 +17,9 @@
 .p-thumbnails{
     height:10vmin;
     margin: 1vmin;
-    border: solid;
-    border-width: .3em;
-    border-color: black;
+   
     background-color: darkblue;
-    border-radius: 10%;
+
 }
 
 .c-thumbnails{
@@ -29,7 +27,7 @@
     margin: 1vmin;
     background-color: darkblue;
     filter: brightness(60%);
-    border-radius: 10%;
+   
 }
 
 .c-characters{
