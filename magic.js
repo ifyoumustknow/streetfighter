@@ -54,7 +54,7 @@ window.onload = function () {
         $("#p1health").empty();
         $("#p1health").append(175);
         $("#P1-fighter").empty();
-        $("#P1-fighter").append('<img src="assets/honda_right.png" class="c-characters"/>');
+        $("#P1-fighter").append('<img src="assets/honda_right2.png" class="c-characters"/>');
         document.getElementById("p1healthbar").style.width = '75%';
         cpuSelect();
         cpuHealth();
