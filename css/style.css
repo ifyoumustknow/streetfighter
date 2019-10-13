@@ -45,7 +45,7 @@
 
 .p-characters{
     height:25vmax;
-    margin: 11vmin;
+    margin: 5vmin;
     padding: 0;
     border-width: .3em;
     background-position:center bottom;
@@ -126,14 +126,14 @@
     cursor: pointer;
 }
 
-#cpu-fighter{
+/* #cpu-fighter{
     height:15vmax;
     margin: auto;
     padding: 0;
     border-width: .3em;
     background-position:center bottom;
     
-}
+} */
 
 /* font-family: bree-serif, serif;
 font-weight: 700;

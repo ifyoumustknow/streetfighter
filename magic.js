@@ -18,8 +18,6 @@ window.onload = function () {
         document.getElementById("p1healthbar").style.width = '70%';
         cpuSelect();
 
-
-
     });
     $("#chung").on("click", function () {
         console.log("test");
@@ -59,30 +57,45 @@ window.onload = function () {
         $("#P1-fighter").append('<img src="assets/Honda_right.png" class="c-characters"/>');
         document.getElementById("p1healthbar").style.width = '75%';
         cpuSelect();
+        cpuHealth();
 
     });
+
     function cpuSelect() {
+
         var cpuFighters = [
-            { name: 'chun', image: `src="assets/chun_left.png" , class: "p-characters"` },
-            { name: 'honda', image: `src="assets/honda_left.png" , class: "p-characters" ` },
-            { name: 'zang', image: `src="assets/zang_left.png", class: "p-characters"` },
-            { name: 'ryu', image: `src="assets/ryu_left.png", class: "p-characters"` }
+            { name: 'chun', image: `src="assets/chun_left.png" , class="p-characters"` },
+            { name: 'honda', image: `src="assets/honda_left.png" , class="p-characters" ` },
+            { name: 'zang', image: `src="assets/zang_left.png", class= "p-characters"` },
+            { name: 'ryu', image: `src="assets/ryu_left.png", class= "p-characters"` }
         ];
         var cpuChoice = cpuFighters[Math.floor(Math.random() * cpuFighters.length)];
+        console.log(cpuChoice)
 
-        // Using backticks `` creates a "string literal" and what that allows us to do is
-        // easily using variables in our strings! Normally we'd just add these together,
-        // but I thought you may want to see how to do it this way and if you'd wanna learn
-        // how it works
         var cpuChoiceHTMLString = `<img ${cpuChoice.image} name=${cpuFighters.name} />`
-
-        // This next one is the exact same end result as "cpuChoiceHTMLString"
-        // Instead of doing anything fancy "string literal" stuff, we are just adding
-        // the strings together as need be.
-        // var cpuChoiceHTMLStringNoLiteral = "<img " + cpuChoice.image + " name=" + cpuFighters.name + " />"
-
         document.getElementById('cpu-fighter').innerHTML = cpuChoiceHTMLString;
+
+
     }
+
+    function cpuHealth() {
+        var cpuSelect
+
+        if (cpuSelect === "ryu") {
+            document.getElementById("cpuhealth").style.width = '70%';
+
+        } else if (cpuSelect === "honda") {
+            document.getElementById("cpuhealth").style.width = '75%';
+
+        } else if (cpuSelect === "zang") {
+            document.getElementById("cpuhealth").style.width = '90%';
+
+        } else {
+            (cpuSelect === "chung")
+            document.getElementById("cpuhealth").style.width = '80%';
+        }
+    }
+
 };
 
 function start() {
