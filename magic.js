@@ -7,8 +7,8 @@ window.onload = function () {
     $("#ryu").on("click", function () {
         console.log("test");
         $("#choose").empty();
-        $("#begin").show();
         $("#title").empty();
+        $("#title").append('<img src="assets/begin.png"/>');
         $("#p1health").empty();
         $("#p1health").append(170);
         $("#P1-fighter").empty();
@@ -16,15 +16,14 @@ window.onload = function () {
         document.getElementById("p1healthbar").style.width = '70%';
         $("#p").attr("disabled", true)
         cpuSelect();
-
-
-
+        begin();
     });
+
     $("#chung").on("click", function () {
         console.log("test");
         $("#choose").empty();
-        $("#begin").show();
         $("#title").empty();
+        $("#title").append('<img src="assets/begin.png"/>');
         $("#p1health").empty();
         $("#p1health").append(180);
         $("#P1-fighter").empty();
@@ -32,34 +31,35 @@ window.onload = function () {
         document.getElementById("p1healthbar").style.width = '80%';
         $("#p").attr("disabled", true)
         cpuSelect();
-
-
+        begin();
 
     });
     $("#zang").on("click", function () {
         console.log("test");
         $("#choose").empty();
-        $("#begin").show();
         $("#title").empty();
+        $("#title").append('<img src="assets/begin.png"/>');
         $("#p1health").empty();
         $("#p1health").append(190);
         $("#P1-fighter").empty();
         $("#P1-fighter").append('<img src="assets/zang_right.png" class="c-characters"/>');
         document.getElementById("p1healthbar").style.width = '90%';
         cpuSelect();
+        begin();
 
     });
     $("#honda").on("click", function () {
         console.log("test");
         $("#choose").empty();
-        $("#begin").show();
-        $("#title").empty();
+        $("#title").empty()
+        $("#title").append('<img src="assets/begin.png"/>');
         $("#p1health").empty();
         $("#p1health").append(175);
         $("#P1-fighter").empty();
         $("#P1-fighter").append('<img src="assets/honda_right2.png" class="c-characters"/>');
         document.getElementById("p1healthbar").style.width = '75%';
         cpuSelect();
+        begin();
 
 
     });
@@ -103,9 +103,46 @@ window.onload = function () {
         }
 
     }
+    // function to calculate random attack points to "Special" "Kick" "Punch" buttons//
 
+    $("#punch").on("click", function () {
+        var kick = Math.floor((Math.random() * 20) + 10);
+        console.log(kick);
+        var status = $("#cpuhealth").text();
+        console.log(status);
+        var result = parseInt(status) - parseInt(kick);
+        console.log(result);
+        $("#cpuhealth").empty();
+        $("#cpuhealth").append(result);
 
-};
+    });
+
+    $("#kick").on("click", function () {
+        var kick = Math.floor((Math.random() * 20) + 10);
+        console.log(kick);
+        var status = $("#cpuhealth").text();
+        console.log(status);
+        var result = parseInt(status) - parseInt(kick);
+        console.log(result);
+        $("#cpuhealth").empty();
+        $("#cpuhealth").append(result);
+
+    });
+
+    $("#special").on("click", function () {
+        var kick = Math.floor((Math.random() * 20) + 10);
+        console.log(kick);
+        var status = $("#cpuhealth").text();
+        console.log(status);
+        var result = parseInt(status) - parseInt(kick);
+        console.log(result);
+        $("#cpuhealth").empty();
+        $("#cpuhealth").append(result);
+
+    });
+
+}
+
 
 function start() {
     document.getElementById('logo').style.display = 'none';
@@ -114,17 +151,24 @@ function start() {
 
 }
 
-// function begin() {
-//     document.getElementByAll('p-characters').style.display = 'none';
+// function to disable thumbnails//
 
-// }
+function begin() {
+    document.getElementById('zang').style.filter = "brightness(60%)";
+    document.getElementById('ryu').style.filter = "brightness(60%)";
+    document.getElementById('ryu').disabled = true;
+    document.getElementById('chung').style.filter = "brightness(60%)";
+    document.getElementById('chung').disabled = true;
+    document.getElementById('honda').style.filter = "brightness(60%)";
+    document.getElementById('honda').disabled = true;
+
+}
+// function to calculate random attack points to "Special" "Kick" "Punch" buttons//
 
 
 
 
 
-
-        // function to calculate random attack points to "Special" "Kick" "Punch" buttons//
 
         // function to calculate randon counter attack points to "Special" "Kick" "Punch" buttons//
 
