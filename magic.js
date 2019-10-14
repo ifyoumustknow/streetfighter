@@ -102,8 +102,6 @@ window.onload = function () {
             document.getElementById("cpuhealthbar").style.width = '80%';
         }
 
-
-
     }
 
 
