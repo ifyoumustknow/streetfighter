@@ -106,18 +106,31 @@ window.onload = function () {
     // function to calculate random attack points to "Special" "Kick" "Punch" buttons//
 
     $("#punch").on("click", function () {
-        var kick = Math.floor((Math.random() * 20) + 10);
-        console.log(kick);
+        $("#title").empty();
+        var punch = Math.floor((Math.random() * 20) + 10);
+        console.log(punch);
         var status = $("#cpuhealth").text();
         console.log(status);
-        var result = parseInt(status) - parseInt(kick);
+        var result = parseInt(status) - parseInt(punch);
         console.log(result);
         $("#cpuhealth").empty();
         $("#cpuhealth").append(result);
+
+        var p1status = $("#p1health").text();
+        console.log(p1status);
+        var counterattack = Math.floor((Math.random() * 30) + 1);
+        console.log(counterattack);
+        var p1result = parseInt(p1status) - parseInt(counterattack);
+        console.log(p1result);
+        $("#p1health").empty();
+        $("#p1health").append(p1result);
+
+
 
     });
 
     $("#kick").on("click", function () {
+        $("#title").empty();
         var kick = Math.floor((Math.random() * 20) + 10);
         console.log(kick);
         var status = $("#cpuhealth").text();
@@ -126,22 +139,47 @@ window.onload = function () {
         console.log(result);
         $("#cpuhealth").empty();
         $("#cpuhealth").append(result);
+
+
+        var p1status = $("#p1health").text();
+        console.log(p1status);
+        var counterattack = Math.floor((Math.random() * 30) + 1);
+        console.log(counterattack);
+        var p1result = parseInt(p1status) - parseInt(counterattack);
+        console.log(p1result);
+        $("#p1health").empty();
+        $("#p1health").append(p1result);
 
     });
 
     $("#special").on("click", function () {
-        var kick = Math.floor((Math.random() * 20) + 10);
-        console.log(kick);
-        var status = $("#cpuhealth").text();
-        console.log(status);
-        var result = parseInt(status) - parseInt(kick);
+        $("#title").empty();
+        var special = Math.floor((Math.random() * 20) + 10);
+        console.log(special);
+        var cpustatus = $("#cpuhealth").text();
+        console.log(cpustatus);
+        var result = parseInt(cpustatus) - parseInt(special);
         console.log(result);
         $("#cpuhealth").empty();
         $("#cpuhealth").append(result);
 
+        var p1status = $("#p1health").text();
+        console.log(p1status);
+        var counterattack = Math.floor((Math.random() * 30) + 1);
+        console.log(counterattack);
+        var p1result = parseInt(p1status) - parseInt(counterattack);
+        console.log(p1result);
+        $("#p1health").empty();
+        $("#p1health").append(p1result);
+
     });
 
-}
+    function counterattack() {
+        var counterattack = Math.floor((Math.random() * 30) + 1);
+
+    }
+};
+
 
 
 function start() {
