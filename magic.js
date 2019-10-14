@@ -3,34 +3,43 @@
 
 window.onload = function () {
     $("#start").on("click", start)
+
     $("#ryu").on("click", function () {
         console.log("test");
         $("#choose").empty();
         $("#title").empty();
+        $("#title").append('<img src="assets/begin.png"/>');
         $("#p1health").empty();
         $("#p1health").append(170);
         $("#P1-fighter").empty();
         $("#P1-fighter").append('<img src="assets/ryu_right.png" class="c-characters"/>');
         document.getElementById("p1healthbar").style.width = '70%';
+        $("#p").attr("disabled", true)
         cpuSelect();
+
 
     });
     $("#chung").on("click", function () {
         console.log("test");
         $("#choose").empty();
         $("#title").empty();
+        $("#title").append('<img src="assets/begin.png"/>');
         $("#p1health").empty();
         $("#p1health").append(180);
         $("#P1-fighter").empty();
         $("#P1-fighter").append('<img src="assets/chun_right.png" class="c-characters"/>');
         document.getElementById("p1healthbar").style.width = '80%';
+        $("#p").attr("disabled", true)
         cpuSelect();
+
+
 
     });
     $("#zang").on("click", function () {
         console.log("test");
         $("#choose").empty();
         $("#title").empty();
+        $("#title").append('<img src="assets/begin.png"/>');
         $("#p1health").empty();
         $("#p1health").append(190);
         $("#P1-fighter").empty();
@@ -44,6 +53,7 @@ window.onload = function () {
         console.log("test");
         $("#choose").empty();
         $("#title").empty();
+        $("#title").append('<img src="assets/begin.png"/>');
         $("#p1health").empty();
         $("#p1health").append(175);
         $("#P1-fighter").empty();
@@ -65,31 +75,35 @@ window.onload = function () {
         var cpuChoice = cpuFighters[Math.floor(Math.random() * cpuFighters.length)];
         console.log(cpuChoice)
 
-        if (cpuChoice.name === ryu) {
-            $("#cpuhealth").empty();
-            $("#cpuealth").append(170);
-            document.getElementById("cpuhealth").style.width = '70%';
+        var cpuChoiceHTMLString = `<img ${cpuChoice.image} name=${cpuFighters.name} />`
+        document.getElementById('cpu-fighter').innerHTML = cpuChoiceHTMLString;
+        console.log(cpuChoiceHTMLString)
 
-        } else if (cpuChoice.name === honda) {
-            $("#cpuhealth").empty();
-            $("#p1health").append(175);
-            document.getElementById("cpuhealth").style.width = '75%';
 
-        } else if (cpuChoice.name === zang) {
-            $("cpuhealth").empty();
+        if (cpuChoiceHTMLString.includes("ryu")) {
+            $("#cpuhealth").empty();
+            $("#cpuhealth").append(170);
+            document.getElementById("cpuhealthbar").style.width = '70%';
+
+        } else if (cpuChoiceHTMLString.includes("honda")) {
+            $("#cpuhealth").empty();
+            $("#cpuhealth").append(175);
+            document.getElementById("cpuhealthbar").style.width = '75%';
+
+        } else if (cpuChoiceHTMLString.includes("zang")) {
+            $("#cpuhealth").empty();
             $("#cpuhealth").append(190);
-            document.getElementById("cpuhealth").style.width = '90%';
+            document.getElementById("cpuhealthbar").style.width = '90%';
 
         } else {
-            cpuChoice.name === chung
+            (cpuChoiceHTMLString.includes("chung"))
             $("#cpuhealth").empty();
             $("#cpuhealth").append(180);
-            document.getElementById("cpuhealth").style.width = '80%';
+            document.getElementById("cpuhealthbar").style.width = '80%';
         }
 
 
-        var cpuChoiceHTMLString = `<img ${cpuChoice.image} name=${cpuFighters.name} />`
-        document.getElementById('cpu-fighter').innerHTML = cpuChoiceHTMLString;
+
     }
 
 

@@ -1,7 +1,16 @@
-.progress {
-    direction: rtl;;
+
+
+  .right {
+    direction: rtl;
     width: 100%;
-    background-color: gray;
+    background-color: black;
+  }
+
+  .left{
+    direction: ltr;;
+    width: 100%;
+    background-color:black;
+      
   }
 
 .background {
@@ -17,7 +26,6 @@
 .p-thumbnails{
     height:10vmin;
     margin: 1vmin;
-   
     background-color: darkblue;
 
 }
@@ -123,6 +131,8 @@
     margin: auto;
     cursor: pointer;
 }
+
+
 
 /* #cpu-fighter{
     height:15vmax;
