@@ -7,8 +7,8 @@ window.onload = function () {
     $("#ryu").on("click", function () {
         console.log("test");
         $("#choose").empty();
+        $("#begin").show();
         $("#title").empty();
-        $("#title").append('<img src="assets/begin.png"/>');
         $("#p1health").empty();
         $("#p1health").append(170);
         $("#P1-fighter").empty();
@@ -18,12 +18,13 @@ window.onload = function () {
         cpuSelect();
 
 
+
     });
     $("#chung").on("click", function () {
         console.log("test");
         $("#choose").empty();
+        $("#begin").show();
         $("#title").empty();
-        $("#title").append('<img src="assets/begin.png"/>');
         $("#p1health").empty();
         $("#p1health").append(180);
         $("#P1-fighter").empty();
@@ -38,8 +39,8 @@ window.onload = function () {
     $("#zang").on("click", function () {
         console.log("test");
         $("#choose").empty();
+        $("#begin").show();
         $("#title").empty();
-        $("#title").append('<img src="assets/begin.png"/>');
         $("#p1health").empty();
         $("#p1health").append(190);
         $("#P1-fighter").empty();
@@ -47,13 +48,12 @@ window.onload = function () {
         document.getElementById("p1healthbar").style.width = '90%';
         cpuSelect();
 
-
     });
     $("#honda").on("click", function () {
         console.log("test");
         $("#choose").empty();
+        $("#begin").show();
         $("#title").empty();
-        $("#title").append('<img src="assets/begin.png"/>');
         $("#p1health").empty();
         $("#p1health").append(175);
         $("#P1-fighter").empty();
@@ -113,6 +113,12 @@ function start() {
     document.getElementById('choose').style.display = 'inline';
 
 }
+
+// function begin() {
+//     document.getElementByAll('p-characters').style.display = 'none';
+
+// }
+
 
 
 

@@ -83,6 +83,9 @@
     padding: 0%;
     border-radius: 1vmin;
     text-align: center;
+    font-family: bree-serif, serif;
+    font-weight: 600;
+    font-style: normal;
 
 }
 
@@ -109,7 +112,13 @@
     font-size: 4vmin;
 }
 
-.choose {
+#choose {
+    margin-top: 20vh;
+    display:none;
+    
+    
+}
+#begin {
     margin-top: 20vh;
     display:none;
     
