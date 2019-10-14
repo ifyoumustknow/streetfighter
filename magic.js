@@ -1,8 +1,10 @@
-
-
-
 window.onload = function () {
-    $("#start").on("click", start)
+
+    var start = $("#start").on("click", function () {
+        document.getElementById('logo').style.display = 'none';
+        document.getElementById('start').style.display = 'none';
+        document.getElementById('choose').style.display = 'inline';
+    });
 
     $("#ryu").on("click", function () {
         console.log("test");
@@ -17,6 +19,7 @@ window.onload = function () {
         $("#p").attr("disabled", true)
         cpuSelect();
         begin();
+
     });
 
     $("#chung").on("click", function () {
@@ -134,7 +137,6 @@ window.onload = function () {
         $("#title").empty();
         $("#title").append('<img src="assets/kick.png"/>');
         var kick = Math.floor((Math.random() * 20) + 10);
-        console.log(kick);
         var status = $("#cpuhealth").text();
         console.log(status);
         var result = parseInt(status) - parseInt(kick);
@@ -151,6 +153,8 @@ window.onload = function () {
         console.log(p1result);
         $("#p1health").empty();
         $("#p1health").append(p1result);
+
+
 
     });
 
@@ -175,46 +179,32 @@ window.onload = function () {
         $("#p1health").empty();
         $("#p1health").append(p1result);
 
+
+
     });
 
-    function counterattack() {
-        var counterattack = Math.floor((Math.random() * 30) + 1);
+
+    // function to disable thumbnails//
+
+    function begin() {
+        document.getElementById('zang').style.filter = "brightness(60%)";
+        document.getElementById('ryu').style.filter = "brightness(60%)";
+        document.getElementById('ryu').disabled = true;
+        document.getElementById('chung').style.filter = "brightness(60%)";
+        document.getElementById('chung').disabled = true;
+        document.getElementById('honda').style.filter = "brightness(60%)";
+        document.getElementById('honda').disabled = true;
 
     }
-};
 
 
+    // function to play again//
 
-function start() {
-    document.getElementById('logo').style.display = 'none';
-    document.getElementById('start').style.display = 'none';
-    document.getElementById('choose').style.display = 'inline';
+    // BONUS function to track health points using health bar ///
 
+    // let cpuhealth = document.getElementById("cpuhealth")
+    // health.value -= 10; //Or whatever you want to do with it.
+
+    // let p1health = document.getElementById("p1health")
+    // health.value -= 10; //Or whatever you want to do with it.
 }
-
-// function to disable thumbnails//
-
-function begin() {
-    document.getElementById('zang').style.filter = "brightness(60%)";
-    document.getElementById('ryu').style.filter = "brightness(60%)";
-    document.getElementById('ryu').disabled = true;
-    document.getElementById('chung').style.filter = "brightness(60%)";
-    document.getElementById('chung').disabled = true;
-    document.getElementById('honda').style.filter = "brightness(60%)";
-    document.getElementById('honda').disabled = true;
-
-}
-// function to calculate random attack points to "Special" "Kick" "Punch" buttons//
-
-
-
-
-        // function to play again//
-
-        // BONUS function to track health points using health bar ///
-
-        // let cpuhealth = document.getElementById("cpuhealth")
-        // health.value -= 10; //Or whatever you want to do with it.
-
-        // let p1health = document.getElementById("p1health")
-        // health.value -= 10; //Or whatever you want to do with it.
