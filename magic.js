@@ -16,7 +16,8 @@ window.onload = function () {
         $("#P1-fighter").empty();
         $("#P1-fighter").append('<img src="assets/ryu_right.png" class="c-characters"/>');
         document.getElementById("p1healthbar").style.width = '70%';
-        $("#p").attr("disabled", true)
+        $("#cpu-damage").empty();
+        $("#p1-damage").empty();
         cpuSelect();
         begin();
 
@@ -32,7 +33,8 @@ window.onload = function () {
         $("#P1-fighter").empty();
         $("#P1-fighter").append('<img src="assets/chun_right.png" class="c-characters"/>');
         document.getElementById("p1healthbar").style.width = '80%';
-        $("#p").attr("disabled", true)
+        $("#cpu-damage").empty();
+        $("#p1-damage").empty();
         cpuSelect();
         begin();
 
@@ -47,6 +49,8 @@ window.onload = function () {
         $("#P1-fighter").empty();
         $("#P1-fighter").append('<img src="assets/zang_right.png" class="c-characters"/>');
         document.getElementById("p1healthbar").style.width = '90%';
+        $("#cpu-damage").empty();
+        $("#p1-damage").empty();
         cpuSelect();
         begin();
 
@@ -61,6 +65,8 @@ window.onload = function () {
         $("#P1-fighter").empty();
         $("#P1-fighter").append('<img src="assets/honda_right2.png" class="c-characters"/>');
         document.getElementById("p1healthbar").style.width = '75%';
+        $("#cpu-damage").empty();
+        $("#p1-damage").empty();
         cpuSelect();
         begin();
 
@@ -113,6 +119,8 @@ window.onload = function () {
         $("#title").append('<img src="assets/punch.png"/>');
         var punch = Math.floor((Math.random() * 20) + 10);
         console.log(punch);
+        $("#cpu-damage").empty();
+        $("#cpu-damage").append("ATTACK " + punch);
         var status = $("#cpuhealth").text();
         console.log(status);
         var result = parseInt(status) - parseInt(punch);
@@ -124,6 +132,8 @@ window.onload = function () {
         console.log(p1status);
         var counterattack = Math.floor((Math.random() * 20) + 10);
         console.log(counterattack);
+        $("#p1-damage").empty();
+        $("#p1-damage").append("COUNTER " + counterattack);
         var p1result = parseInt(p1status) - parseInt(counterattack);
         console.log(p1result);
         $("#p1health").empty();
@@ -139,6 +149,8 @@ window.onload = function () {
         var kick = Math.floor((Math.random() * 20) + 10);
         var status = $("#cpuhealth").text();
         console.log(status);
+        $("#cpu-damage").empty();
+        $("#cpu-damage").append("ATTACK " + kick);
         var result = parseInt(status) - parseInt(kick);
         console.log(result);
         $("#cpuhealth").empty();
@@ -149,6 +161,8 @@ window.onload = function () {
         console.log(p1status);
         var counterattack = Math.floor((Math.random() * 20) + 10);
         console.log(counterattack);
+        $("#p1-damage").empty();
+        $("#p1-damage").append("COUNTER " + counterattack);
         var p1result = parseInt(p1status) - parseInt(counterattack);
         console.log(p1result);
         $("#p1health").empty();
@@ -165,6 +179,8 @@ window.onload = function () {
         console.log(special);
         var cpustatus = $("#cpuhealth").text();
         console.log(cpustatus);
+        $("#cpu-damage").empty();
+        $("#cpu-damage").append("ATTACK " + special);
         var result = parseInt(cpustatus) - parseInt(special);
         console.log(result);
         $("#cpuhealth").empty();
@@ -174,6 +190,8 @@ window.onload = function () {
         console.log(p1status);
         var counterattack = Math.floor((Math.random() * 30) + 1);
         console.log(counterattack);
+        $("#p1-damage").empty();
+        $("#p1-damage").append("COUNTER " + counterattack);
         var p1result = parseInt(p1status) - parseInt(counterattack);
         console.log(p1result);
         $("#p1health").empty();

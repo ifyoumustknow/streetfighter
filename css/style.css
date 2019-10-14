@@ -1,3 +1,30 @@
+.cpu-damage{
+    font-size:5vmin;
+    color: red;
+    font-family: bree-serif, serif;
+    font-weight: 700;
+    font-style: normal;
+    float: left;
+    margin-top: 10vh;
+    -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: white;
+  
+
+}
+.p1-damage{
+    font-size:5vmin;
+    color: olivedrab;
+    font-family: bree-serif, serif;
+    font-weight: 700;
+    font-style: normal;
+    float:right; 
+    margin-top: 10vh;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    
+
+}
+
 .score{
     font-size: 2vmin;
     color: white;
