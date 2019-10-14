@@ -45,6 +45,7 @@
     border-width: .3em;
     background-position:center bottom;
     display: inline;
+    align-items: baseline;
   
 
 }
@@ -56,6 +57,7 @@
     border-width: .3em;
     background-position:center bottom;
     display: inline;
+    align-items: baseline;
 }
 
 .versus{
