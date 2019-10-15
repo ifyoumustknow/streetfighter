@@ -37,6 +37,7 @@ window.onload = function () {
         document.getElementById("p1healthbar").style.width = '80%';
         $("#cpu-damage").empty();
         $("#p1-damage").empty();
+
         cpuSelect();
         begin();
 
@@ -115,8 +116,8 @@ window.onload = function () {
 
     }
     // function to calculate random attack points to "Special" "Kick" "Punch" buttons//
-
-    $("#punch").on("click", function () {
+    $(document).on('click', '#punch', function () {
+        begin()
         $("#title").empty();
         $("#title").append('<img src="assets/punch.png"/>');
         var punch = Math.floor((Math.random() * 20) + 10);
@@ -146,8 +147,8 @@ window.onload = function () {
 
 
     });
-
-    $("#kick").on("click", function () {
+    $(document).on('click', '#kick', function () {
+        begin()
         $("#title").empty();
         $("#title").append('<img src="assets/kick.png"/>');
         var kick = Math.floor((Math.random() * 20) + 10);
@@ -175,8 +176,8 @@ window.onload = function () {
 
 
     });
-
-    $("#special").on("click", function () {
+    $(document).on('click', '#special', function () {
+        begin()
         $("#title").empty();
         $("#title").append('<img src="assets/special.png"/>');
         var special = Math.floor((Math.random() * 30) + 1);
@@ -235,6 +236,10 @@ window.onload = function () {
         document.getElementById('ryu').style.filter = "brightness(60%)";
         document.getElementById('chung').style.filter = "brightness(60%)";
         document.getElementById('honda').style.filter = "brightness(60%)";
+        $("#zang").attr("disabled", true);
+        $("#ryu").attr("disabled", true);
+        $("#chung").attr("disabled", true);
+        $("#honda").attr("disabled", true);
 
 
     }
@@ -242,21 +247,47 @@ window.onload = function () {
     function checkPlayerScore() {
         var playerhealth = parseInt(p1health.innerHTML);
         var computerhealth = parseInt(cpuhealth.innerHTML);
-        var playerwins = document.getElementById("p1wins").innerHTML;
-        var playerlosses = document.getElementById("p1losses").innerHTML;
-        var computerwins = document.getElementById("cpuwins").innerHTML;
-        var computerlosses = document.getElementById("cpulosses").innerHTML;
+        var playerwins = parseInt(p1wins.innerHTML);
+        var playerlosses = parseInt(p1losses.innerHTML);
+        var computerwins = parseInt(cpuwins.innerHTML);
+        var computerlosses = parseInt(cpulosses.innerHTML);
 
-        if (playerhealth > computerhealth) {
-            playerwins++;
-            computerlosses++;
-
-        } else if (playerhealth < computerhealth) {
-            computerwins++;
+        if (playerhealth < 1) {
             playerlosses++;
+            $('#p1losses').html(playerlosses);
+            computerwins++;
+            $('#cpuwins').html(playerlosses);
+            $('#p1health').empty();
+            $('#cpuhealth').empty();
+            $('#P1-fighter').empty();
+            $('#cpu-fighter').empty();
+            $("#title").empty();
+            $("#title").append('<img src="assets/loose.png"/>');
+            $("#start").append('<img src="assets/start.png"/>');
+
+
+        } else if (computerhealth < 1) {
+            computerlosses++;
+            $('#cpulosses').html(computerlosses);
+            playerwins++;
+            $('#p1wins').html(playerwins);
+            $('#p1health').empty();
+            $('#cpuhealth').empty();
+            $('#cpu-fighter').empty();
+            $('#P1-fighter').empty();
+            $("#title").empty();
+            $("#title").append('<img src="assets/win.png"/>');
+            $("#start").append('<img src="assets/start.png"/>');
+
+
+        } else {
+            $('#$p1health').empty();
+            $('#cpuhealth').empty();
+            $('#cpu-fighter').empty();
+            $('#P1-fighter').empty();
+            $("#start").append('<img src="assets/start.png"/>');
         }
     }
-
 
 
 
