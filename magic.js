@@ -1,3 +1,5 @@
+
+
 window.onload = function () {
 
     var start = $("#start").on("click", function () {
@@ -139,6 +141,16 @@ window.onload = function () {
         $("#p1health").empty();
         $("#p1health").append(p1result);
 
+        if (p1result < 0 && result > 1)
+            $("#start").append("YOU LOOSE");
+        document.getElementById("#cpuwins") + 1;
+        document.getElementById("#p1losses") + 1;
+
+        if (p1result > 0 && result < 1)
+            $("#start").append("YOU WIN");
+        document.getElementById("#p1wins") + 1;
+        document.getElementById("#cpulosses") + 1;
+
 
     });
 
@@ -155,7 +167,6 @@ window.onload = function () {
         $("#cpuhealth").empty();
         $("#cpuhealth").append(result);
 
-
         var p1status = $("#p1health").text();
         console.log(p1status);
         var counterattack = Math.floor((Math.random() * 20) + 10);
@@ -166,6 +177,16 @@ window.onload = function () {
         console.log(p1result);
         $("#p1health").empty();
         $("#p1health").append(p1result);
+
+        if (p1result < 0 && result > 1)
+            $("#start").append("YOU LOOSE");
+        document.getElementById("#cpuwins") + 1;
+        document.getElementById("#p1losses") + 1;
+
+        if (p1result > 0 && result < 1)
+            $("#start").append("YOU WIN");
+        document.getElementById("#p1wins") + 1;
+        document.getElementById("#cpulosses") + 1;
 
     });
 
@@ -181,7 +202,7 @@ window.onload = function () {
         var result = parseInt(cpustatus) - parseInt(special);
         console.log(result);
         $("#cpuhealth").empty();
-        $("#cpuhealth").append(result);
+        $("#cpuhealth").append(result).get(0);
 
         var p1status = $("#p1health").text();
         console.log(p1status);
@@ -194,31 +215,40 @@ window.onload = function () {
         $("#p1health").empty();
         $("#p1health").append(p1result);
 
-        // if (p1result < "0" && cpuhealth > "0") {
+        if (p1result < 0 && result > 1)
+            $("#start").append("YOU LOOSE");
+        document.getElementById("#cpuwins") + 1;
+        document.getElementById("#p1losses") + 1;
 
-        //     $("#start").append("YOU LOOSE");
-        // } else {
-        //     (p1result > "0" && cpuhealth < "0")
+        if (p1result > 0 && result < 1)
+            $("#start").append("YOU WIN");
+        document.getElementById("#p1wins" + 1);
+        document.getElementById("#cpulosses" + 1);
 
-        //     $("#start").append("YOU WIN");
-        // }
+
+
+
+
 
     });
 
 
+}
 
 
 
-    // function to disable thumbnails//
-
-    function begin() {
-        document.getElementById('zang').style.filter = "brightness(60%)";
-        document.getElementById('ryu').style.filter = "brightness(60%)";
-        document.getElementById('chung').style.filter = "brightness(60%)";
-        document.getElementById('honda').style.filter = "brightness(60%)";
 
 
-    }
+// function to disable thumbnails//
+
+function begin() {
+    document.getElementById('zang').style.filter = "brightness(60%)";
+    document.getElementById('ryu').style.filter = "brightness(60%)";
+    document.getElementById('chung').style.filter = "brightness(60%)";
+    document.getElementById('honda').style.filter = "brightness(60%)";
+
+
+}
 
 
     // function to play again//
@@ -230,4 +260,3 @@ window.onload = function () {
 
     // let p1health = document.getElementById("p1health")
     // health.value -= 10; //Or whatever you want to do with it.
-}
