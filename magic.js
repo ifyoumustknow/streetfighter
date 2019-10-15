@@ -140,7 +140,6 @@ window.onload = function () {
         $("#p1health").append(p1result);
 
 
-
     });
 
     $("#kick").on("click", function () {
@@ -167,8 +166,6 @@ window.onload = function () {
         console.log(p1result);
         $("#p1health").empty();
         $("#p1health").append(p1result);
-
-
 
     });
 
@@ -197,9 +194,19 @@ window.onload = function () {
         $("#p1health").empty();
         $("#p1health").append(p1result);
 
+        // if (p1result < "0" && cpuhealth > "0") {
 
+        //     $("#start").append("YOU LOOSE");
+        // } else {
+        //     (p1result > "0" && cpuhealth < "0")
+
+        //     $("#start").append("YOU WIN");
+        // }
 
     });
+
+
+
 
 
     // function to disable thumbnails//
@@ -207,11 +214,9 @@ window.onload = function () {
     function begin() {
         document.getElementById('zang').style.filter = "brightness(60%)";
         document.getElementById('ryu').style.filter = "brightness(60%)";
-        document.getElementById('ryu').disabled = true;
         document.getElementById('chung').style.filter = "brightness(60%)";
-        document.getElementById('chung').disabled = true;
         document.getElementById('honda').style.filter = "brightness(60%)";
-        document.getElementById('honda').disabled = true;
+
 
     }
 
