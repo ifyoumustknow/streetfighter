@@ -141,15 +141,8 @@ window.onload = function () {
         $("#p1health").empty();
         $("#p1health").append(p1result);
 
-        if (p1result < 0 && result > 1)
-            $("#start").append("YOU LOOSE");
-        document.getElementById("#cpuwins") + 1;
-        document.getElementById("#p1losses") + 1;
+        checkPlayerScore()
 
-        if (p1result > 0 && result < 1)
-            $("#start").append("YOU WIN");
-        document.getElementById("#p1wins") + 1;
-        document.getElementById("#cpulosses") + 1;
 
 
     });
@@ -178,15 +171,8 @@ window.onload = function () {
         $("#p1health").empty();
         $("#p1health").append(p1result);
 
-        if (p1result < 0 && result > 1)
-            $("#start").append("YOU LOOSE");
-        document.getElementById("#cpuwins") + 1;
-        document.getElementById("#p1losses") + 1;
+        checkPlayerScore()
 
-        if (p1result > 0 && result < 1)
-            $("#start").append("YOU WIN");
-        document.getElementById("#p1wins") + 1;
-        document.getElementById("#cpulosses") + 1;
 
     });
 
@@ -215,43 +201,66 @@ window.onload = function () {
         $("#p1health").empty();
         $("#p1health").append(p1result);
 
-        if (p1result < 0 && result > 1)
-            $("#start").append("YOU LOOSE");
-        document.getElementById("#cpuwins") + 1;
-        document.getElementById("#p1losses") + 1;
-
-        if (p1result > 0 && result < 1)
-            $("#start").append("YOU WIN");
-        document.getElementById("#p1wins" + 1);
-        document.getElementById("#cpulosses" + 1);
-
-
-
-
-
+        checkPlayerScore()
 
     });
 
+    // function score() {
+    //     var p1wins = ("p1wins");
+    //     var p1losses = ("p1looses");
+    //     var cpuwins = ("cpuwins");
+    //     var cpulosses = ("cpulooses");
 
-}
-
-
-
-
-
-// function to disable thumbnails//
-
-function begin() {
-    document.getElementById('zang').style.filter = "brightness(60%)";
-    document.getElementById('ryu').style.filter = "brightness(60%)";
-    document.getElementById('chung').style.filter = "brightness(60%)";
-    document.getElementById('honda').style.filter = "brightness(60%)";
+    //     var p1health = ("p1health");
+    //     var cpuhealth = ("cpuhealth");
 
 
-}
+    //     if (p1health < 1 && cpuhealth < 0);
+    //     $("#start").append("YOU WIN");
+    //     (p1wins).append(+ 1);
+    //     (cpulosses).append(+ 1);
+
+    //     if (p1health < 0 && cpuhealth < 1);
+    //     $("#start").append("YOU Loose");
+
+    //     (cpuwins).append(+ 1);
+    //     (p1losses).append(+ 1);
+
+    // }
+
+    // function to disable thumbnails//
+
+    function begin() {
+        document.getElementById('zang').style.filter = "brightness(60%)";
+        document.getElementById('ryu').style.filter = "brightness(60%)";
+        document.getElementById('chung').style.filter = "brightness(60%)";
+        document.getElementById('honda').style.filter = "brightness(60%)";
 
 
-    // function to play again//
+    }
+
+    function checkPlayerScore() {
+        var playerhealth = parseInt(p1health.innerHTML);
+        var computerhealth = parseInt(cpuhealth.innerHTML);
+        var playerwins = document.getElementById("p1wins").innerHTML;
+        var playerlosses = document.getElementById("p1losses").innerHTML;
+        var computerwins = document.getElementById("cpuwins").innerHTML;
+        var computerlosses = document.getElementById("cpulosses").innerHTML;
+
+        if (playerhealth > computerhealth) {
+            playerwins++;
+            computerlosses++;
+
+        } else if (playerhealth < computerhealth) {
+            computerwins++;
+            playerlosses++;
+        }
+    }
+
+
+
+
+    // function to play again or restart//
 
     // BONUS function to track health points using health bar ///
 
@@ -260,3 +269,4 @@ function begin() {
 
     // let p1health = document.getElementById("p1health")
     // health.value -= 10; //Or whatever you want to do with it.
+}
