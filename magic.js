@@ -120,7 +120,7 @@ window.onload = function () {
         begin()
         $("#title").empty();
         $("#title").append('<img src="assets/punch.png"/>');
-        var punch = Math.floor((Math.random() * 20) + 10);
+        var punch = Math.floor((Math.random() * 10) + 10);
         console.log(punch);
         $("#cpu-damage").empty();
         $("#cpu-damage").append("ATTACK " + punch);
@@ -133,7 +133,7 @@ window.onload = function () {
 
         var p1status = $("#p1health").text();
         console.log(p1status);
-        var counterattack = Math.floor((Math.random() * 20) + 10);
+        var counterattack = Math.floor((Math.random() * 10) + 10);
         console.log(counterattack);
         $("#p1-damage").empty();
         $("#p1-damage").append("COUNTER " + counterattack);
@@ -256,11 +256,7 @@ window.onload = function () {
 
 
         } else {
-            $('#$p1health').empty();
-            $('#cpuhealth').empty();
-            $('#cpu-fighter').empty();
-            $('#P1-fighter').empty();
-            $("#start").append('<img src="assets/start.png"/>');
+            document.getElementById('start').style.display = 'inline';
         }
     }
 
