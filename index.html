@@ -8,11 +8,12 @@
     <title>Rob's Web Portfolio</title>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Merriweather|Playfair+Display:900|Source+Serif+Pro&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://use.typekit.net/jnj8hmj.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css" type="text/css" rel="stylesheet">
 
 
@@ -36,10 +37,14 @@
                 <img src="assets/Sf2hf-honda-portrait.gif" class="c-thumbnails" id="honda2">
                 <img src="assets/Sf2hf-chun-portrait.gif" class="c-thumbnails" id="chung2">
                 <p id="cpuhealth" class="cpuhealth">HEALTH </p>
-                <div class="progress left">
+                <!-- <div class="progress left">
                     <div id="cpuhealthbar" class="progress-bar bg-danger progress-bar-striped progress-bar-animated"
                         role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="90" style="width: 100%">
                     </div>
+                </div> -->
+                <div id="progressbar2"
+                    class="right progress progress-bar bg-danger progress-bar-striped progress-bar-animated "
+                    role="progressbar">
                 </div>
             </div>
             <div class="col-2 text-center">
@@ -59,10 +64,13 @@
                 <img src="assets/right-chun-portrait.gif" class="p-thumbnails" type="button" id="chung">
 
                 <p id="p1health" class="p1health">HEALTH </p>
-                <div class="progress right">
+                <!-- <div class="progress right">
                     <div id="p1healthbar" class="progress-bar bg-danger progress-bar-striped progress-bar-animated"
                         role="progressbar" valuenow="75" valuemin="0" valuemax="100" style="width: 100%">
                     </div>
+                </div> -->
+                <div id="progressbar" class="progress bg-danger progress-bar-striped progress-bar-animated "
+                    valuenow="0" valuemin="100" valuemax="0">
                 </div>
                 <div class="row justify-content-end">
                     <div class="col-12">
@@ -94,9 +102,11 @@
             </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
     <script src="magic.js"></script>
+
 </body>
 
 </html>

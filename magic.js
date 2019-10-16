@@ -18,7 +18,9 @@ window.onload = function () {
         $("#p1health").append(170);
         $("#P1-fighter").empty();
         $("#P1-fighter").append('<img src="assets/ryu_right.png" class="c-characters"/>');
-        document.getElementById("p1healthbar").style.width = '70%';
+        $("#progressbar").progressbar({
+            value: 30
+        });
         $("#cpu-damage").empty();
         $("#p1-damage").empty();
         cpuSelect();
@@ -35,7 +37,9 @@ window.onload = function () {
         $("#p1health").append(180);
         $("#P1-fighter").empty();
         $("#P1-fighter").append('<img src="assets/chun_right.png" class="c-characters"/>');
-        document.getElementById("p1healthbar").style.width = '80%';
+        $("#progressbar").progressbar({
+            value: 20
+        });
         $("#cpu-damage").empty();
         $("#p1-damage").empty();
         cpuSelect();
@@ -51,7 +55,9 @@ window.onload = function () {
         $("#p1health").append(190);
         $("#P1-fighter").empty();
         $("#P1-fighter").append('<img src="assets/zang_right.png" class="c-characters"/>');
-        document.getElementById("p1healthbar").style.width = '90%';
+        $("#progressbar").progressbar({
+            value: 10
+        });
         $("#cpu-damage").empty();
         $("#p1-damage").empty();
         cpuSelect();
@@ -67,7 +73,9 @@ window.onload = function () {
         $("#p1health").append(175);
         $("#P1-fighter").empty();
         $("#P1-fighter").append('<img src="assets/honda_right2.png" class="c-characters"/>');
-        document.getElementById("p1healthbar").style.width = '75%';
+        $("#progressbar").progressbar({
+            value: 25
+        });
         $("#cpu-damage").empty();
         $("#p1-damage").empty();
         cpuSelect();
@@ -95,23 +103,31 @@ window.onload = function () {
         if (cpuChoiceHTMLString.includes("ryu")) {
             $("#cpuhealth").empty();
             $("#cpuhealth").append(170);
-            document.getElementById("cpuhealthbar").style.width = '70%';
+            $("#progressbar2").progressbar({
+                value: 30
+            });
 
         } else if (cpuChoiceHTMLString.includes("honda")) {
             $("#cpuhealth").empty();
             $("#cpuhealth").append(175);
-            document.getElementById("cpuhealthbar").style.width = '75%';
+            $("#progressbar2").progressbar({
+                value: 25
+            });
 
         } else if (cpuChoiceHTMLString.includes("zang")) {
             $("#cpuhealth").empty();
             $("#cpuhealth").append(190);
-            document.getElementById("cpuhealthbar").style.width = '90%';
+            $("#progressbar2").progressbar({
+                value: 10
+            });
 
         } else {
             (cpuChoiceHTMLString.includes("chung"))
             $("#cpuhealth").empty();
             $("#cpuhealth").append(180);
-            document.getElementById("cpuhealthbar").style.width = '80%';
+            $("#progressbar2").progressbar({
+                value: 20
+            });
         }
 
     }
@@ -206,7 +222,7 @@ window.onload = function () {
 
     });
 
-    // function to disable thumbnails//
+
 
     function begin() {
         document.getElementById('zang').style.filter = "brightness(60%)";
@@ -258,6 +274,7 @@ window.onload = function () {
         } else {
             document.getElementById('start').style.display = 'inline';
         }
+
     }
 
 
