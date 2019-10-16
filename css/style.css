@@ -27,7 +27,7 @@
 }
 
 .score{
-    font-size: 2vmin;
+    font-size: 3vmin;
     color: white;
     font-family: bree-serif, serif;
     font-weight: 400;
@@ -61,6 +61,7 @@
     height:9vmin;
     /* margin: 1vmin; */
     background-color: darkblue;
+
 
 }
 

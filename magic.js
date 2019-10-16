@@ -9,6 +9,7 @@ window.onload = function () {
     });
 
     $("#ryu").on("click", function () {
+
         console.log("test");
         $("#choose").empty();
         $("#title").empty();
@@ -21,7 +22,7 @@ window.onload = function () {
         $("#cpu-damage").empty();
         $("#p1-damage").empty();
         cpuSelect();
-        begin();
+
 
     });
 
@@ -37,9 +38,8 @@ window.onload = function () {
         document.getElementById("p1healthbar").style.width = '80%';
         $("#cpu-damage").empty();
         $("#p1-damage").empty();
-
         cpuSelect();
-        begin();
+
 
     });
     $("#zang").on("click", function () {
@@ -55,7 +55,7 @@ window.onload = function () {
         $("#cpu-damage").empty();
         $("#p1-damage").empty();
         cpuSelect();
-        begin();
+
 
     });
     $("#honda").on("click", function () {
@@ -71,7 +71,7 @@ window.onload = function () {
         $("#cpu-damage").empty();
         $("#p1-damage").empty();
         cpuSelect();
-        begin();
+
 
 
     });
@@ -141,7 +141,7 @@ window.onload = function () {
         console.log(p1result);
         $("#p1health").empty();
         $("#p1health").append(p1result);
-
+        $("#btnSubmit").attr("disabled", true);
         checkPlayerScore()
 
 
@@ -201,33 +201,10 @@ window.onload = function () {
         console.log(p1result);
         $("#p1health").empty();
         $("#p1health").append(p1result);
-
+        $("#btnSubmit").attr("disabled", true);
         checkPlayerScore()
 
     });
-
-    // function score() {
-    //     var p1wins = ("p1wins");
-    //     var p1losses = ("p1looses");
-    //     var cpuwins = ("cpuwins");
-    //     var cpulosses = ("cpulooses");
-
-    //     var p1health = ("p1health");
-    //     var cpuhealth = ("cpuhealth");
-
-
-    //     if (p1health < 1 && cpuhealth < 0);
-    //     $("#start").append("YOU WIN");
-    //     (p1wins).append(+ 1);
-    //     (cpulosses).append(+ 1);
-
-    //     if (p1health < 0 && cpuhealth < 1);
-    //     $("#start").append("YOU Loose");
-
-    //     (cpuwins).append(+ 1);
-    //     (p1losses).append(+ 1);
-
-    // }
 
     // function to disable thumbnails//
 
@@ -236,10 +213,6 @@ window.onload = function () {
         document.getElementById('ryu').style.filter = "brightness(60%)";
         document.getElementById('chung').style.filter = "brightness(60%)";
         document.getElementById('honda').style.filter = "brightness(60%)";
-        $("#zang").attr("disabled", true);
-        $("#ryu").attr("disabled", true);
-        $("#chung").attr("disabled", true);
-        $("#honda").attr("disabled", true);
 
 
     }
@@ -258,11 +231,12 @@ window.onload = function () {
             computerwins++;
             $('#cpuwins').html(playerlosses);
             $('#p1health').empty();
+            $('#p1health').append("Loser");
             $('#cpuhealth').empty();
-            $('#P1-fighter').empty();
-            $('#cpu-fighter').empty();
+            $('#cpuhealth').append("Winner");
+            $('#p1fighter').empty();
             $("#title").empty();
-            $("#title").append('<img src="assets/loose.png"/>');
+            $("#title").append('<img src="assets/lose.png"/>');
             $("#start").append('<img src="assets/start.png"/>');
 
 
@@ -272,9 +246,10 @@ window.onload = function () {
             playerwins++;
             $('#p1wins').html(playerwins);
             $('#p1health').empty();
+            $('#p1health').append("Winner");
             $('#cpuhealth').empty();
+            $('#cpuhealth').append("Loser");
             $('#cpu-fighter').empty();
-            $('#P1-fighter').empty();
             $("#title").empty();
             $("#title").append('<img src="assets/win.png"/>');
             $("#start").append('<img src="assets/start.png"/>');
