@@ -234,7 +234,7 @@ window.onload = function () {
             $('#p1health').append("Loser");
             $('#cpuhealth').empty();
             $('#cpuhealth').append("Winner");
-            $('#p1fighter').empty();
+            $('#P1-fighter').empty();
             $("#title").empty();
             $("#title").append('<img src="assets/lose.png"/>');
             $("#start").append('<img src="assets/start.png"/>');
