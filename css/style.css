@@ -91,10 +91,11 @@ border-radius: 6px;
 
 .c-characters{
     height:25vmax;
+    float:right;
     padding: 0;
     border-width: .3em;
-    /* background-position:center bottom; */
-    display: inline-block;
+    background-position:center bottom;
+    /* display: inline-block; */
     
   
 
@@ -102,10 +103,11 @@ border-radius: 6px;
 
 .p-characters{
     height:25vmax;
+    float:left;
     padding: 0;
     border-width: .3em;
-    /* background-position:center bottom; */
-    display: inline-block;
+    background-position:center bottom;
+    /* display: inline-block; */
     
 }
 
