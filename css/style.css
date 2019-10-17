@@ -89,7 +89,7 @@ border-radius: 6px;
     height:25vmax;
     padding: 0;
     border-width: .3em;
-    background-position:center bottom;
+    /* background-position:center bottom; */
     display: inline-block;
     
   
@@ -100,7 +100,7 @@ border-radius: 6px;
     height:25vmax;
     padding: 0;
     border-width: .3em;
-    background-position:center bottom;
+    /* background-position:center bottom; */
     display: inline-block;
     
 }
