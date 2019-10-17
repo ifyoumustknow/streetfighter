@@ -1,3 +1,11 @@
+.center{
+    width: 12vw;
+}
+
+.play{
+    width: 20vw;
+   
+}
 .progressbar{
 width: 25vw;
 height: 2vh;
@@ -15,7 +23,6 @@ border-radius: 6px;
     font-weight: 700;
     font-style: normal;
     float: left;
-    margin-top: 10vh;
     -webkit-text-stroke-width: 1px;
    -webkit-text-stroke-color: white;
 
@@ -28,7 +35,6 @@ border-radius: 6px;
     font-weight: 700;
     font-style: normal;
     float:right; 
-    margin-top: 10vh;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: white;
     
@@ -153,13 +159,13 @@ border-radius: 6px;
 }
 
 #choose {
-    margin-top: 0vh;
-    display:none;
+    margin-top:5vh;
+    display:inline-block;
 }
 
 #charselect {
     margin-top:0vh;
-    display:none;
+    display:inline-block;
 }
 
 
@@ -179,14 +185,14 @@ border-radius: 6px;
     cursor: pointer;
 }
 
-.playagain{
+#playagain {
     margin-top:20px;
     width: 25vw;
     cursor: pointer;
 }
 
 #controls{
-    display:none;
+    display:inline;
 }
 
 

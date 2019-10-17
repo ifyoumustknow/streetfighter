@@ -1,34 +1,41 @@
 
 
 window.onload = function () {
+    $("#winner").css('display', 'none');
+    $("#loser").css('display', 'none');
+    $("#charselect").css('display', 'none');
+    $("#controls").css('display', 'none');
+    $('#playagain').css('display', 'none');
 
-    $("#start").on("click", function () {
-        document.getElementById('logo').style.display = 'none';
-        document.getElementById('start').style.display = 'none';
-        document.getElementById('choose').style.display = 'block';
-        document.getElementById('charselect').style.display = 'block';
+
+
+    $(document).on('click', '#playagain', function () {
+
+        $("#winner").css('display', 'none');
+        $("#loser").css('display', 'none');
+        $("#logo").css('display', 'none');
+        $("#start").css('display', 'none');
+        $('#P1-fighter').empty();
+        $('#cpu-fighter').empty();
+        $("#playagain").css('display', 'none');
+        $("#charselect").css('display', 'inline-block');
     });
 
-    $("#playagain").on("click", function () {
-
-        $("#playagain").empty();
-        $("#P1-fighter").empty();
-        $("#cpu-fighter").empty();
-        $("#cpu-damage").empty();
-        $("#p1-damage").empty();
-        $("#title").empty();
-        location.reload(true);
-
+    $(document).on('click', '#start', function () {
+        $("#logo").css('display', 'none');
+        $("#start").css('display', 'none');
+        $("#playagain").css('display', 'none');
+        $("#charselect").css('display', 'inline-block');
 
     });
 
-    $("#ryu").on("click", function () {
-        document.getElementById('controls').style.display = 'inline';
-        $("#charselect").empty();
+
+
+    $(document).on('click', '#ryu', function () {
+        $("#controls").css('display', 'inline-block');
+        $("#charselect").css('display', 'none');
         $("#player1").empty();
         $("#player1").append('<img src="assets/right-ryu-portrait.gif" class="p-thumbnails"/>');
-        $("#choose").empty();
-
         $("#p1health").empty();
         $("#p1health").append(70);
         $("#P1-fighter").empty();
@@ -43,12 +50,12 @@ window.onload = function () {
 
     });
 
-    $("#chung").on("click", function () {
-        document.getElementById('controls').style.display = 'block';
-        $("#charselect").empty();;
+    $(document).on('click', '#chung', function () {
+        $("#controls").css('display', 'inline-block');
+        $("#charselect").css('display', 'none');
         $("#player1").empty();
         $("#player1").append('<img src="assets/right-chun-portrait.gif" class="p-thumbnails"/>');
-        $("#choose").empty();
+
 
         $("#p1health").empty();
         $("#p1health").append(80);
@@ -63,12 +70,11 @@ window.onload = function () {
 
 
     });
-    $("#zang").on("click", function () {
-        document.getElementById('controls').style.display = 'block';
-        $("#charselect").empty();
+    $(document).on('click', '#zang', function () {
+        $("#controls").css('display', 'inline-block');
+        $("#charselect").css('display', 'none');
         $("#player1").empty();
-        $("#player1").append('<img src="assets/right-zangief-portrait.gif" class="p-thumbnails"/>');
-        $("#choose").empty();
+        $("#player1").append('<img src="assets/right-zangief-portrait.gif" class="p-thumbnails"/>')
 
         $("#p1health").empty();
         $("#p1health").append(90);
@@ -83,13 +89,11 @@ window.onload = function () {
 
 
     });
-    $("#honda").on("click", function () {
-        document.getElementById('controls').style.display = 'block';
-        $("#charselect").empty();
+    $(document).on('click', '#honda', function () {
+        $("#controls").css('display', 'inline-block');
+        $("#charselect").css('display', 'none');
         $("#player1").empty();
         $("#player1").append('<img src="assets/right-honda-portrait.gif" class="p-thumbnails"/>');
-        $("#choose").empty();
-
         $("#p1health").empty();
         $("#p1health").append(75);
         $("#P1-fighter").empty();
@@ -154,9 +158,8 @@ window.onload = function () {
     }
     // function to calculate random attack points to "Special" "Kick" "Punch" buttons//
     $(document).on('click', '#punch', function () {
-
-        $("#title").empty();
-        $("#title").append('<img src="assets/punch.png"/>');
+        $("#attacks").empty();
+        $("#attacks").append('<img src="assets/punch.png"/>');
         var punch = Math.floor((Math.random() * 10) + 10);
         console.log(punch);
         $("#cpu-damage").empty();
@@ -190,9 +193,8 @@ window.onload = function () {
 
     });
     $(document).on('click', '#kick', function () {
-
-        $("#title").empty();
-        $("#title").append('<img src="assets/kick.png"/>');
+        $("#attacks").empty();
+        $("#attacks").append('<img src="assets/punch.png"/>');
         var kick = Math.floor((Math.random() * 20) + 10);
         var cpustatus = $("#cpuhealth").text();
         console.log(cpustatus);
@@ -224,9 +226,8 @@ window.onload = function () {
 
     });
     $(document).on('click', '#special', function () {
-
-        $("#title").empty();
-        $("#title").append('<img src="assets/special.png"/>');
+        $("#attacks").empty();
+        $("#attacks").append('<img src="assets/punch.png"/>');
         var special = Math.floor((Math.random() * 30) + 1);
         console.log(special);
         var cpustatus = $("#cpuhealth").text();
@@ -280,12 +281,12 @@ window.onload = function () {
             $('#P1-fighter').empty();
             $("#cpu-damage").empty();
             $("#p1-damage").empty();
-            $("#controls").empty();
+            $("#controls").css('display', 'none');
             $("#progressbar").empty();
-
-            $("#title").empty();
-            $("#title").append('<img src="assets/lose.png"/>');
-            $("#playagain").append('<img src="assets/playagain.png"/>');
+            $("#attacks").empty();
+            $("#winner").css('display', 'none');
+            $("#loser").css('display', 'inline-block');
+            $('#playagain').css('display', 'inline-block');
 
 
 
@@ -303,30 +304,21 @@ window.onload = function () {
             $("#p1-damage").empty();
             $("#cpu-damage").empty();
             $("#p1-damage").empty();
-            $("#controls").empty();
-            $("#title").empty();
-            $("#title").append('<img src="assets/win.png"/>');
-            $("#playagain").append('<img src="assets/playagain.png"/>');
-
+            $("#controls").css('display', 'none');
+            $("#attacks").empty();
+            $("#winner").css('display', 'inline-block');
+            $("#loser").css('display', 'none');
+            $('#playagain').css('display', 'inline-block');
 
 
 
         } else {
 
-
-        }
-
+        };
     }
 
-
-
-    // function to play again or restart//
-
-    // BONUS function to track health points using health bar ///
-
-    // let cpuhealth = document.getElementById("cpuhealth")
-    // health.value -= 10; //Or whatever you want to do with it.
-
-    // let p1health = document.getElementById("p1health")
-    // health.value -= 10; //Or whatever you want to do with it.
 }
+
+
+
+
