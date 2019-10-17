@@ -44,7 +44,7 @@ window.onload = function () {
     });
 
     $("#chung").on("click", function () {
-        document.getElementById('controls').style.display = 'inline';
+        document.getElementById('controls').style.display = 'block';
         $("#charselect").empty();;
         $("#player1").empty();
         $("#player1").append('<img src="assets/right-chun-portrait.gif" class="p-thumbnails"/>');
@@ -64,7 +64,7 @@ window.onload = function () {
 
     });
     $("#zang").on("click", function () {
-        document.getElementById('controls').style.display = 'inline';
+        document.getElementById('controls').style.display = 'block';
         $("#charselect").empty();
         $("#player1").empty();
         $("#player1").append('<img src="assets/right-zangief-portrait.gif" class="p-thumbnails"/>');
@@ -84,7 +84,7 @@ window.onload = function () {
 
     });
     $("#honda").on("click", function () {
-        document.getElementById('controls').style.display = 'inline';
+        document.getElementById('controls').style.display = 'block';
         $("#charselect").empty();
         $("#player1").empty();
         $("#player1").append('<img src="assets/right-honda-portrait.gif" class="p-thumbnails"/>');

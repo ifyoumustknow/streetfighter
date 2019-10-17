@@ -32,13 +32,12 @@
                     <a> Losses: </a>
                     <span id="cpulosses">0</span>
                 </div>
-                <div id="cpu">
-                    <img src="assets/Sf2hf-ryu-portrait.gif" class="c-thumbnails" id="ryu2">
-                    <img src="assets/Sf2hf-zangief-portrait.gif" class="c-thumbnails" id="zang2">
-                    <img src="assets/Sf2hf-honda-portrait.gif" class="c-thumbnails" id="honda2">
-                    <img src="assets/Sf2hf-chun-portrait.gif" class="c-thumbnails" id="chung2"></div>
+                <img src="assets/Sf2hf-ryu-portrait.gif" class="c-thumbnails" id="ryu2">
+                <img src="assets/Sf2hf-zangief-portrait.gif" class="c-thumbnails" id="zang2">
+                <img src="assets/Sf2hf-honda-portrait.gif" class="c-thumbnails" id="honda2">
+                <img src="assets/Sf2hf-chun-portrait.gif" class="c-thumbnails" id="chung2">
                 <p id="cpuhealth" class="cpuhealth">HEALTH </p>
-                <div id="progressbar2" class="progressbar left">
+                <div id="progressbar2" class="progressbar right">
                 </div>
             </div>
             <div class="col-2 text-center">
@@ -52,18 +51,18 @@
                     <a> Losses: </a>
                     <span id="p1losses">0</span>
                 </div>
-                <div id="player1">
-                    <img src="assets/right-ryu-portrait.gif" class="p-thumbnails">
-                    <img src="assets/right-zangief-portrait.gif" class="p-thumbnails">
-                    <img src="assets/right-honda-portrait.gif" class="p-thumbnails">
-                    <img src="assets/right-chun-portrait.gif" class="p-thumbnails"></div>
+                <img src="assets/right-ryu-portrait.gif" class="p-thumbnails" type="button" id="ryu">
+                <img src="assets/right-zangief-portrait.gif" class="p-thumbnails" type="button" id="zang">
+                <img src="assets/right-honda-portrait.gif" class="p-thumbnails" type="button" id="honda">
+                <img src="assets/right-chun-portrait.gif" class="p-thumbnails" type="button" id="chung">
+
                 <p id="p1health" class="p1health">HEALTH </p>
+
                 <div id="progressbar" class="progressbar right">
                 </div>
-                <br>
                 <div class="row justify-content-end">
                     <div class="col-12">
-                        <div class="text-md-right" id="controls">
+                        <div class="text-md-right">
                             <button type="button" class="btn btn-warning button" id="special">Special</button>
                             <button type="button" class="btn btn-danger button" id="kick">Kick</button>
                             <button type="button" class="btn btn-success button" id="punch">Punch</button>
@@ -74,29 +73,18 @@
         </div>
         <div class="flexcontainer">
             <div class="row">
-                <br>
-                <div class="col-12 text-center" id="title" class="margin-top">
-                    <p id="logo"><img src="assets/Street_Fighter_Logo.png" class="logo"></p>
-                    <p id="start"><img src="assets/start.png" class="start"></p>
-                    <br>
-                    <p id="winner"></p>
-                    <p id="choose"><img src="assets/choose.png"></p>
-                    </br>
-                    <p id="charselect">
-                        <img src="assets/right-ryu-portrait.gif" class="p-thumbnails" type="button" id="ryu">
-                        <img src="assets/right-zangief-portrait.gif" class="p-thumbnails" type="button" id="zang">
-                        <img src="assets/right-honda-portrait.gif" class="p-thumbnails" type="button" id="honda">
-                        <img src="assets/right-chun-portrait.gif" class="p-thumbnails" type="button" id="chung">
-                    </p>
+                <div class="col-12 text-center" id="title">
+                    <div id="logo"><img src="assets/Street_Fighter_Logo.png" class="logo"></div>
+                    <a id="start"><img src="assets/start.png" class="start"></a>
+                    <a id="choose"><img src="assets/choose.png"></a>
                 </div>
             </div>
+
             <div class="row">
                 <div class="col-4 text-md-left " id="cpu-fighter"><img></img></div>
                 <div class="col-4 text-center">
                     <span class="cpu-damage" id="cpu-damage"></span>
                     <span class="p1-damage" id="p1-damage"></span>
-                    <br>
-                    <span class="playagain" id="playagain"></span>
                 </div>
                 <div class="col-4 text-md-right" id="P1-fighter"></div>
             </div>
