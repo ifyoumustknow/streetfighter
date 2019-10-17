@@ -1,4 +1,10 @@
+.progressbar{
+width: 20vw;
+height: 2vh;
+background-color: black;
+color: coral;
 
+}
 .cpu-damage{
     font-size:5vmin;
     color: red;
@@ -36,14 +42,13 @@
 }
 .right {
     direction: rtl;
-    width: 100%;
-    background-color: black;
+    float: right;
+  
   }
 
 .left{
-    direction: ltr;;
-    width: 100%;
-    background-color:black;
+
+    float:left
       
   }
 
@@ -75,7 +80,6 @@
 
 .c-characters{
     height:25vmax;
-    margin: 5vmin;
     padding: 0;
     border-width: .3em;
     background-position:center bottom;
@@ -87,7 +91,6 @@
 
 .p-characters{
     height:25vmax;
-    margin: 5vmin;
     padding: 0;
     border-width: .3em;
     background-position:center bottom;
@@ -150,11 +153,15 @@
 }
 
 #choose {
-    margin-top: 20vh;
+    margin-top: 0vh;
     display:none;
-    
-    
 }
+
+#charselect {
+    margin-top:0vh;
+    display:none;
+}
+
 
 .gameover {
     margin-top: 20vh;
@@ -169,8 +176,17 @@
 
 .start{
     width: 25vw;
-    margin: auto;
     cursor: pointer;
+}
+
+.playagain{
+    margin-top:20px;
+    width: 25vw;
+    cursor: pointer;
+}
+
+#controls{
+    display:none;
 }
 
 

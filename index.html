@@ -32,19 +32,18 @@
                     <a> Losses: </a>
                     <span id="cpulosses">0</span>
                 </div>
-                <img src="assets/Sf2hf-ryu-portrait.gif" class="c-thumbnails" id="ryu2">
-                <img src="assets/Sf2hf-zangief-portrait.gif" class="c-thumbnails" id="zang2">
-                <img src="assets/Sf2hf-honda-portrait.gif" class="c-thumbnails" id="honda2">
-                <img src="assets/Sf2hf-chun-portrait.gif" class="c-thumbnails" id="chung2">
+                <div id="cpu">
+                    <img src="assets/Sf2hf-ryu-portrait.gif" class="c-thumbnails" id="ryu2">
+                    <img src="assets/Sf2hf-zangief-portrait.gif" class="c-thumbnails" id="zang2">
+                    <img src="assets/Sf2hf-honda-portrait.gif" class="c-thumbnails" id="honda2">
+                    <img src="assets/Sf2hf-chun-portrait.gif" class="c-thumbnails" id="chung2"></div>
                 <p id="cpuhealth" class="cpuhealth">HEALTH </p>
                 <!-- <div class="progress left">
                     <div id="cpuhealthbar" class="progress-bar bg-danger progress-bar-striped progress-bar-animated"
                         role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="90" style="width: 100%">
                     </div>
                 </div> -->
-                <div id="progressbar2"
-                    class="right progress progress-bar bg-danger progress-bar-striped progress-bar-animated "
-                    role="progressbar">
+                <div id="progressbar2" class="progressbar left">
                 </div>
             </div>
             <div class="col-2 text-center">
@@ -58,10 +57,11 @@
                     <a> Losses: </a>
                     <span id="p1losses">0</span>
                 </div>
-                <img src="assets/right-ryu-portrait.gif" class="p-thumbnails" type="button" id="ryu">
-                <img src="assets/right-zangief-portrait.gif" class="p-thumbnails" type="button" id="zang">
-                <img src="assets/right-honda-portrait.gif" class="p-thumbnails" type="button" id="honda">
-                <img src="assets/right-chun-portrait.gif" class="p-thumbnails" type="button" id="chung">
+                <div id="player1">
+                    <img src="assets/right-ryu-portrait.gif" class="p-thumbnails">
+                    <img src="assets/right-zangief-portrait.gif" class="p-thumbnails">
+                    <img src="assets/right-honda-portrait.gif" class="p-thumbnails">
+                    <img src="assets/right-chun-portrait.gif" class="p-thumbnails"></div>
 
                 <p id="p1health" class="p1health">HEALTH </p>
                 <!-- <div class="progress right">
@@ -69,12 +69,11 @@
                         role="progressbar" valuenow="75" valuemin="0" valuemax="100" style="width: 100%">
                     </div>
                 </div> -->
-                <div id="progressbar" class="progress bg-danger progress-bar-striped progress-bar-animated "
-                    valuenow="0" valuemin="100" valuemax="0">
+                <div id="progressbar" class="progressbar right">
                 </div>
                 <div class="row justify-content-end">
                     <div class="col-12">
-                        <div class="text-md-right">
+                        <div class="text-md-right" id="controls">
                             <button type="button" class="btn btn-warning button" id="special">Special</button>
                             <button type="button" class="btn btn-danger button" id="kick">Kick</button>
                             <button type="button" class="btn btn-success button" id="punch">Punch</button>
@@ -85,18 +84,29 @@
         </div>
         <div class="flexcontainer">
             <div class="row">
-                <div class="col-12 text-center" id="title">
-                    <div id="logo"><img src="assets/Street_Fighter_Logo.png" class="logo"></div>
-                    <a id="start"><img src="assets/start.png" class="start"></a>
-                    <a id="choose"><img src="assets/choose.png"></a>
+                <br>
+                <div class="col-12 text-center" id="title" class="margin-top">
+                    <p id="logo"><img src="assets/Street_Fighter_Logo.png" class="logo"></p>
+                    <p id="start"><img src="assets/start.png" class="start"></p>
+                    <br>
+                    <p id="winner"></p>
+                    <p id="choose"><img src="assets/choose.png"></p>
+                    </br>
+                    <p id="charselect">
+                        <img src="assets/right-ryu-portrait.gif" class="p-thumbnails" type="button" id="ryu">
+                        <img src="assets/right-zangief-portrait.gif" class="p-thumbnails" type="button" id="zang">
+                        <img src="assets/right-honda-portrait.gif" class="p-thumbnails" type="button" id="honda">
+                        <img src="assets/right-chun-portrait.gif" class="p-thumbnails" type="button" id="chung">
+                    </p>
                 </div>
             </div>
-
             <div class="row">
                 <div class="col-4 text-md-left " id="cpu-fighter"><img></img></div>
                 <div class="col-4 text-center">
                     <span class="cpu-damage" id="cpu-damage"></span>
                     <span class="p1-damage" id="p1-damage"></span>
+                    <br>
+                    <span class="playagain" id="playagain"></span>
                 </div>
                 <div class="col-4 text-md-right" id="P1-fighter"></div>
             </div>
