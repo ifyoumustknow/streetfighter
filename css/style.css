@@ -1,9 +1,11 @@
 .progressbar{
-width: 20vw;
+width: 25vw;
 height: 2vh;
 background-color: black;
-color: coral;
-
+border: darkgray;
+border-style: solid;
+border-width: 1px;
+border-radius: 6px;
 }
 .cpu-damage{
     font-size:5vmin;
