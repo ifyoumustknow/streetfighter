@@ -160,7 +160,7 @@ window.onload = function () {
     $(document).on('click', '#punch', function () {
         $("#attacks").empty();
         $("#attacks").append('<img src="assets/punch.png" , class="center"/>');
-        var punch = Math.floor((Math.random() * 10) + 10);
+        var punch = Math.floor((Math.random() * 10) + 1);
         console.log(punch);
         $("#cpu-damage").empty();
         $("#cpu-damage").append("ATTACK " + punch);
@@ -176,7 +176,7 @@ window.onload = function () {
 
         var p1status = $("#p1health").text();
         console.log(p1status);
-        var counterattack = Math.floor((Math.random() * 10) + 10);
+        var counterattack = Math.floor((Math.random() * 30) + 1);
         console.log(counterattack);
         $("#p1-damage").empty();
         $("#p1-damage").append("COUNTER " + counterattack);
@@ -210,7 +210,7 @@ window.onload = function () {
 
         var p1status = $("#p1health").text();
         console.log(p1status);
-        var counterattack = Math.floor((Math.random() * 20) + 10);
+        var counterattack = Math.floor((Math.random() * 30) + 1);
         console.log(counterattack);
         $("#p1-damage").empty();
         $("#p1-damage").append("COUNTER " + counterattack);
