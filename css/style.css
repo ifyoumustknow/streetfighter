@@ -1,12 +1,13 @@
 .center{
-    width: 12vw;
+    width: 30vw;
 }
 
 .play{
     width: 20vw;
    
 }
-.progressbar{
+
+.progressbar {
 width: 25vw;
 height: 2vh;
 background-color: black;
@@ -22,7 +23,7 @@ border-radius: 6px;
     font-family: bree-serif, serif;
     font-weight: 700;
     font-style: normal;
-    float: left;
+    float: right;
     -webkit-text-stroke-width: 1px;
    -webkit-text-stroke-color: white;
 
@@ -34,7 +35,7 @@ border-radius: 6px;
     font-family: bree-serif, serif;
     font-weight: 700;
     font-style: normal;
-    float:right; 
+    float:left; 
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: white;
     

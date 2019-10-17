@@ -159,7 +159,7 @@ window.onload = function () {
     // function to calculate random attack points to "Special" "Kick" "Punch" buttons//
     $(document).on('click', '#punch', function () {
         $("#attacks").empty();
-        $("#attacks").append('<img src="assets/punch.png"/>');
+        $("#attacks").append('<img src="assets/punch.png" , class="center"/>');
         var punch = Math.floor((Math.random() * 10) + 10);
         console.log(punch);
         $("#cpu-damage").empty();
@@ -194,7 +194,7 @@ window.onload = function () {
     });
     $(document).on('click', '#kick', function () {
         $("#attacks").empty();
-        $("#attacks").append('<img src="assets/punch.png"/>');
+        $("#attacks").append('<img src="assets/punch.png" class="center"/>');
         var kick = Math.floor((Math.random() * 20) + 10);
         var cpustatus = $("#cpuhealth").text();
         console.log(cpustatus);
@@ -227,7 +227,7 @@ window.onload = function () {
     });
     $(document).on('click', '#special', function () {
         $("#attacks").empty();
-        $("#attacks").append('<img src="assets/punch.png"/>');
+        $("#attacks").append('<img src="assets/punch.png" class="center"/>');
         var special = Math.floor((Math.random() * 30) + 1);
         console.log(special);
         var cpustatus = $("#cpuhealth").text();
@@ -282,7 +282,6 @@ window.onload = function () {
             $("#cpu-damage").empty();
             $("#p1-damage").empty();
             $("#controls").css('display', 'none');
-            $("#progressbar").empty();
             $("#attacks").empty();
             $("#winner").css('display', 'none');
             $("#loser").css('display', 'inline-block');

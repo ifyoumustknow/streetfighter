@@ -8,6 +8,8 @@
     <title>Rob's Web Portfolio</title>
 
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+
     <link href="https://fonts.googleapis.com/css?family=Merriweather|Playfair+Display:900|Source+Serif+Pro&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -63,7 +65,7 @@
                 <br>
                 <div class="row justify-content-end">
                     <div class="col-12">
-                        <div class="text-md-right" id="controls">
+                        <div class="text-md-right center" id="controls">
                             <button type="button" class="btn btn-success button" id="punch">Punch</button>
                             <button type="button" class="btn btn-danger button" id="kick">Kick</button>
                             <button type="button" class="btn btn-warning button" id="special">Special</button>
@@ -92,16 +94,16 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-4 text-md-left" id="cpu-fighter"></div>
-                <div class="col-4 text-center">
-                    <span id="attacks"></span>
-                    <span id="winner"><img src="assets/win.png"></span>
-                    <span id="loser"><img src="assets/lose.png"></span>
-                    <span id="attacks"></span>
+                <div class="col-md-4 text-md-left" id="cpu-fighter"></div>
+                <div class="col-md-4 text-md-center">
+                    <span id="winner" class="center"><img src="assets/win.png" class="center"></span>
+                    <span id="loser" class="center"><img src="assets/lose.png" class="center"></span>
+                    <span id="attacks" class="center"></span>
                     <div id="playagain"><img src="assets/playagain.png" class="play"></div>
                     <br>
                     <span class="cpu-damage" id="cpu-damage"></span>
                     <span class="p1-damage" id="p1-damage"></span>
+
                 </div>
                 <div class="col-4 text-md-right" id="P1-fighter"></div>
             </div>
