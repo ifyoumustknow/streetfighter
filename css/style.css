@@ -1,9 +1,13 @@
 .center{
-    width: 30vw;
+    width: 30vmax;
 }
 
+.max20{
+    width: 20vmax;
+} 
+
 .play{
-    width: 20vw;
+    width: 20vmax;
    
 }
 
@@ -18,7 +22,7 @@ border-radius: 6px;
 }
 
 .cpu-damage{
-    font-size:5vmin;
+    font-size:2.5vmax;
     color: red;
     font-family: bree-serif, serif;
     font-weight: 700;
@@ -30,7 +34,7 @@ border-radius: 6px;
 }
 
 .p1-damage{
-    font-size:5vmin;
+    font-size:2.5vmax;
     color: olivedrab;
     font-family: bree-serif, serif;
     font-weight: 700;
