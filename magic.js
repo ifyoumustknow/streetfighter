@@ -202,6 +202,7 @@ window.onload = function () {
         $("#p1-damage").empty();
         $("#p1-damage").append("COUNTER " + counterattack);
         $("#p1-damage").toggleClass('ping')
+
         var p1result = parseInt(p1status) - parseInt(counterattack);
         console.log(p1result);
         $("#p1health").empty();
@@ -313,7 +314,7 @@ window.onload = function () {
             playerlosses++;
             $('#p1losses').html(playerlosses);
             computerwins++;
-            $('#cpuwins').html(playerlosses);
+            $('#cpuwins').html(computerwins);
             $('#p1health').empty();
             $('#p1health').append("Loser");
             $('#cpuhealth').empty();
