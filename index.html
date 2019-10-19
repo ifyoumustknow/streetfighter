@@ -46,7 +46,7 @@
             <div class="col-2 text-center">
                 <img src="assets/vs.png" class="versus" id="CPU">
             </div>
-            <div class="col-5 text-sm-right">
+            <div class="col-5 text-md-right">
                 <h1 class="text">PLAYER 1</h1>
                 <div class="score">
                     <a>Wins: </a>
@@ -62,50 +62,37 @@
                 <p id="p1health" class="p1health">HEALTH </p>
                 <div id="progressbar" class="progressbar right">
                 </div>
-                <br>
-                <div class="row justify-content-end">
-                    <div class="col-12">
-                        <div class="text-md-right center" id="controls">
-                            <button type="button" class="btn btn-success button" id="punch">Punch</button>
-                            <button type="button" class="btn btn-danger button" id="kick">Kick</button>
-                            <button type="button" class="btn btn-warning button" id="special">Special</button>
-
-                        </div>
-                    </div>
+                <div class="text-right center" id="controls">
+                    <button type="button" class="btn btn-success button" id="punch">Punch</button>
+                    <button type="button" class="btn btn-danger button" id="kick">Kick</button>
+                    <button type="button" class="btn btn-warning button" id="special">Special</button>
                 </div>
             </div>
         </div>
-        <div class="flexcontainer">
-            <div class="row">
+        <div class="col-12 text-center">
+            <div id="logo"><img src="assets/Street_Fighter_Logo.png" class="logo"></div>
+            <div id="start"><img src="assets/start.png" class="start"></div>
+        </div>
+        <div id="charselect" class="col-12 text-center">
+            <div><img src="assets/choose.png" class="center"></div>
+            <br>
+            <img src="assets/right-ryu-portrait.gif" class="p-thumbnails" type="button" id="ryu">
+            <img src="assets/right-zangief-portrait.gif" class="p-thumbnails" type="button" id="zang">
+            <img src="assets/right-honda-portrait.gif" class="p-thumbnails" type="button" id="honda">
+            <img src="assets/right-chun-portrait.gif" class="p-thumbnails" type="button" id="chung">
+        </div>
+        <div class="row">
+            <div class="col-md-4 text-md-left" id="cpu-fighter" class="c-character"></div>
+            <div class="col-md-4 text-md-center">
+                <span id="winner" class="center"><img src="assets/win.png" class="center"></span>
+                <span id="loser" class="center"><img src="assets/lose.png" class="center"></span>
+                <span id="attacks" class="max20"></span>
+                <div id="playagain"><img src="assets/playagain.png" class="play"></div>
                 <br>
-                <div class="col-12 text-center" class="margin-top">
-                    <div id="logo"><img src="assets/Street_Fighter_Logo.png" class="logo"></div>
-                    <div id="start"><img src="assets/start.png" class="start"></div>
-                    <br>
-                    <br>
-                    <div id="charselect">
-                        <div><img src="assets/choose.png" class="center"></div>
-                        <br>
-                        <img src="assets/right-ryu-portrait.gif" class="p-thumbnails" type="button" id="ryu">
-                        <img src="assets/right-zangief-portrait.gif" class="p-thumbnails" type="button" id="zang">
-                        <img src="assets/right-honda-portrait.gif" class="p-thumbnails" type="button" id="honda">
-                        <img src="assets/right-chun-portrait.gif" class="p-thumbnails" type="button" id="chung">
-                    </div>
-                </div>
+                <span class="cpu-damage" id="cpu-damage"></span>
+                <span class="p1-damage" id="p1-damage"></span>
             </div>
-            <div class="row">
-                <div class="col-sm-4 text-md-left" id="cpu-fighter" class="c-character"></div>
-                <div class="col-sm-4 text-md-center">
-                    <span id="winner" class="center"><img src="assets/win.png" class="center"></span>
-                    <span id="loser" class="center"><img src="assets/lose.png" class="center"></span>
-                    <span id="attacks" class="max20"></span>
-                    <div id="playagain"><img src="assets/playagain.png" class="play"></div>
-                    <br>
-                    <span class="cpu-damage" id="cpu-damage"></span>
-                    <span class="p1-damage" id="p1-damage"></span>
-                </div>
-                <div class="col-sm-4 text-md-right" id="P1-fighter" class="p-character"></div>
-            </div>
+            <div class="col-md-4 text-md-right" id="P1-fighter" class="p-character"></div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>

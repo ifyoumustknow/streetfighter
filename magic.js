@@ -176,11 +176,10 @@ window.onload = function () {
         $("#attacks").append('<img src="assets/punch.png" , class="max20"/>');
         $("#attacks").toggleClass('shake-horizontal');
 
-        var punch = Math.floor((Math.random() * 5) + 1);
+        var punch = Math.floor((Math.random() * 10) + 1);
         console.log(punch);
         $("#cpu-damage").empty();
         $("#cpu-damage").append("ATTACK " + punch);
-        $("#cpu-damage").toggleClass('ping')
         var cpustatus = $("#cpuhealth").text();
         console.log(cpustatus);
         var result = parseInt(cpustatus) - parseInt(punch);
@@ -197,11 +196,10 @@ window.onload = function () {
 
         var p1status = $("#p1health").text();
         console.log(p1status);
-        var counterattack = Math.floor((Math.random() * 30) + 1);
+        var counterattack = Math.floor((Math.random() * 20) + 1);
         console.log(counterattack);
         $("#p1-damage").empty();
         $("#p1-damage").append("COUNTER " + counterattack);
-        $("#p1-damage").toggleClass('ping')
 
         var p1result = parseInt(p1status) - parseInt(counterattack);
         console.log(p1result);
@@ -220,12 +218,11 @@ window.onload = function () {
         $("#P1-fighter").toggleClass('rotate-center');
         $("#attacks").empty();
         $("#attacks").append('<img src="assets/kick.png" class="max20"/>');
-        var kick = Math.floor((Math.random() * 15) + 5);
+        var kick = Math.floor((Math.random() * 20) + 10);
         var cpustatus = $("#cpuhealth").text();
         console.log(cpustatus);
         $("#cpu-damage").empty();
         $("#cpu-damage").append("ATTACK " + kick);
-        $("#cpu-damage").toggleClass('ping');
         var result = parseInt(cpustatus) - parseInt(kick);
         console.log(result);
         $("#cpuhealth").empty();
@@ -240,11 +237,10 @@ window.onload = function () {
 
         var p1status = $("#p1health").text();
         console.log(p1status);
-        var counterattack = Math.floor((Math.random() * 30) + 1);
+        var counterattack = Math.floor((Math.random() * 20) + 1);
         console.log(counterattack);
         $("#p1-damage").empty();
         $("#p1-damage").append("COUNTER " + counterattack);
-        $("#p1-damage").toggleClass('ping')
         var p1result = parseInt(p1status) - parseInt(counterattack);
         console.log(p1result);
         $("#p1health").empty();
@@ -266,13 +262,12 @@ window.onload = function () {
 
         $("#attacks").empty();
         $("#attacks").append('<img src="assets/special.png" class="max20"/>');
-        var special = Math.floor((Math.random() * 30) + 5);
+        var special = Math.floor((Math.random() * 30) + 10);
         console.log(special);
         var cpustatus = $("#cpuhealth").text();
         console.log(cpustatus);
         $("#cpu-damage").empty();
         $("#cpu-damage").append("ATTACK " + special);
-        $("#cpu-damage").toggleClass('ping')
         var result = parseInt(cpustatus) - parseInt(special);
         console.log(result);
         $("#cpuhealth").empty();
@@ -283,11 +278,10 @@ window.onload = function () {
 
         var p1status = $("#p1health").text();
         console.log(p1status);
-        var counterattack = Math.floor((Math.random() * 30) + 1);
+        var counterattack = Math.floor((Math.random() * 20) + 5);
         console.log(counterattack);
         $("#p1-damage").empty();
         $("#p1-damage").append("COUNTER " + counterattack);
-        $("#p1-damage").toggleClass('ping')
         var p1result = parseInt(p1status) - parseInt(counterattack);
         console.log(p1result);
         $("#p1health").empty();
@@ -295,8 +289,6 @@ window.onload = function () {
         $("#progressbar").progressbar({
             value: (p1status - counterattack)
         });
-
-
         checkPlayerScore()
 
     });
@@ -356,11 +348,7 @@ window.onload = function () {
 
         };
 
-        function randomattack() {
-            var actions = ['rotate-center', 'rotate-center', 'slide-fwd-right', 'slide-fwd-left'];
-            var actionVal = actions[Math.floor(Math.random() * actions.length)];
 
-        }
     }
 
 }

@@ -66,11 +66,12 @@ border-radius: 6px;
 .background {
     background: url(animated-gifs-of-fighting-game-backgrounds-5.gif) repeat center center fixed;
     background-size: cover;
-    width:100%;
+    width:100vw;
     height:100vh;
     padding:2vmin;
     margin:auto;
     background-color: black;
+    position: relative;
 }
 
 .p-thumbnails{
@@ -94,13 +95,19 @@ border-radius: 6px;
     float:right;
     padding: 0;
     border-width: .3em;
+    margin-top: 5vh;
     background-position:center bottom;
     /* display: inline-block; */
-    
-    
+    vertical-align: bottom;
+    margin-bottom: 0%;
+    position: absolute;
+    align-content:bottom;
+    top:0;
+    right:0;
   
-
 }
+
+
 
 .p-characters{
     height:25vmax;
@@ -108,28 +115,37 @@ border-radius: 6px;
     padding: 0;
     border-width: .3em;
     background-position:center bottom;
+    margin-top: 5vh;
     /* display: inline-block; */
+    vertical-align: bottom;
+    margin-bottom: 0%;
+    position: absolute;
+    align-content:bottom;
+    top:0;
+    left:0;
+
     
 }
 
 .versus{
-    height:14vmin;
+    height:12vmin;
     margin: 8vmin auto;
 
 }
 
 .text{
     
-    font-size: 5vmin;
+    font-size: 4vmin;
     color: aqua;
     font-family: bree-serif, serif;
     font-weight: 600;
     font-style: normal;
+    margin-bottom: 0%;
 }
 
 
 .button {
-    margin:3vh 1vh 1vh 1vh;
+    margin:2vh 1vh 1vh 1vh;
     height:5vmin;
     width: 10vmin;
     font-size: 2vmin;
@@ -156,23 +172,26 @@ border-radius: 6px;
     font-weight: 600;
     font-style: normal;
     color: white;
-    font-size: 4vmin;
+    font-size: 3vmin;
+    margin-bottom: 0;
+
 }
 .p1health{
     font-family: bree-serif, serif;
     font-weight: 600;
     font-style: normal;
     color: white;
-    font-size: 4vmin;
+    font-size: 3vmin;
+    margin-bottom: 0;
 }
 
 #choose {
-    margin-top:5vh;
+    margin-top:3vh;
     display:inline-block;
 }
 
 #charselect {
-    margin-top:0vh;
+    margin: auto;
     display:inline-block;
 }
 
@@ -194,7 +213,7 @@ border-radius: 6px;
 }
 
 #playagain {
-    margin-top:20px;
+    margin-top:10vh;
     width: 25vw;
     cursor: pointer;
 }
