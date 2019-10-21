@@ -185,7 +185,7 @@ window.onload = function () {
         var result = parseInt(cpustatus) - parseInt(punch);
         console.log(result);
         $("#cpuhealth").empty();
-        $("#cpuhealth").append(result);
+        $("#cpuhealth").append(result).get(0);
         $("#progressbar2").progressbar({
             value: (cpustatus - punch)
         });
@@ -226,7 +226,7 @@ window.onload = function () {
         var result = parseInt(cpustatus) - parseInt(kick);
         console.log(result);
         $("#cpuhealth").empty();
-        $("#cpuhealth").append(result);
+        $("#cpuhealth").append(result).get(0);
         $("#progressbar2").progressbar({
             value: (cpustatus - kick)
         });

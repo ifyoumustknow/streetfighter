@@ -1,3 +1,9 @@
+.flex-container {
+  display: flex;
+  justify-content: center;
+  
+}
+
 .center{
     width: 30vmax;
 }
@@ -97,13 +103,10 @@ border-radius: 6px;
     border-width: .3em;
     margin-top: 5vh;
     background-position:center bottom;
-    /* display: inline-block; */
+  
     vertical-align: bottom;
     margin-bottom: 0%;
-    position: absolute;
-    align-content:bottom;
-    top:0;
-    right:0;
+   
   
 }
 
